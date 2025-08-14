@@ -1,0 +1,32 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    i18n_domain="udala.zinegotziak"
+    >
+
+  <genericsetup:registerProfile
+      name="default"
+      title="udala.zinegotziak: Install"
+      description="Package to configure a new udala.zinegotziak site"
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/default"
+      />
+
+  <genericsetup:registerProfile
+      name="uninstall"
+      title="udala.zinegotziak: Uninstall"
+      description="Uninstall udala.zinegotziak setup."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      directory="profiles/uninstall"
+      />
+
+  <!-- Hide Uninstall Profile-->
+  <utility
+      factory=".setuphandlers.HiddenProfiles"
+      name="udala.zinegotziak"
+      />
+
+
+  <include package=".upgrades" />
+
+</configure>
