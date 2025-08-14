@@ -7,7 +7,7 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
-
+  <include package="plone.app.contentmenu" />
 
   <browser:page
       name="zinegotziak-view"
@@ -16,6 +16,8 @@
       template="zinegotziak_view.pt"
       permission="zope2.View"
       layer="udala.zinegotziak.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Zinegotziak"
       />
 
   <browser:page
