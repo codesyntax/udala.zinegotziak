@@ -1,0 +1,9 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter factory=".alderdia.dummy"
+    name="alderdia" />
+
+  <adapter factory=".alderdia.alderdia"
+    name="alderdia" />
+
+</configure>

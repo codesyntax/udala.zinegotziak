@@ -2,9 +2,8 @@
 <object meta_type="Plone Types Tool"
         name="portal_types"
 >
-  <!--
-  <object meta_type="Dexterity FTI"
-          name="MyType"
-  />
--->
+  <object name="Alderdia" meta_type="Dexterity FTI"/>
+  <object name="Batzordea" meta_type="Dexterity FTI"/>
+  <object name="Zinegotzia" meta_type="Dexterity FTI"/>
+
 </object>

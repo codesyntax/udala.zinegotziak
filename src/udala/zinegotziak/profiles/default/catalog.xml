@@ -10,4 +10,10 @@
   <!-- Metadata
   <column value="industry" />
 -->
+<index name="alderdia" meta_type="FieldIndex">
+        <indexed_attr value="alderdia" />
+  </index>
+  <index name="batzordeak_index" meta_type="KeywordIndex">
+      <indexed_attr value="batzordeak_index" />
+  </index>
 </object>

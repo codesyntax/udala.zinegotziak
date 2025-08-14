@@ -1,0 +1,97 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="udala.zinegotziak"
+>
+
+  <body>
+
+    <metal:custom_title fill-slot="content-title">
+      <h1 tal:replace="structure context/@@title"></h1>
+    </metal:custom_title>
+
+    <metal:custom_description fill-slot="content-description">
+      <p tal:replace="structure context/@@description"></p>
+    </metal:custom_description>
+
+    <metal:content-core fill-slot="content-core">
+      <metal:block define-macro="content-core">
+
+        <tal:define tal:define="
+                      alderdi_eta_zinegotziak view/alderdi_eta_zinegotziak;
+                    "
+                    tal:condition="nocall:alderdi_eta_zinegotziak"
+        >
+
+          <tal:repeatalderdia tal:repeat="element alderdi_eta_zinegotziak">
+            <div class="alderdia d-flex align-items-center mb-5">
+
+
+              <img class="border border-6"
+                   sizes="(min-width: 350px) 400px,100vw"
+                   tal:define="
+                     scale nocall:element/item/@@images;
+                   "
+                   tal:replace="structure python:scale.srcset(
+                    fieldname='image',
+                    sizes='(min-width: 350px) 400px,100vw',
+                    css_class='border border-6',
+                    alt=element['item'].Title(),
+                    title=element['item'].Title()
+                   )"
+              />
+
+              <h2 class="m-0">
+                <a tal:content="element/item/title"
+                   tal:attributes="
+                     href element/item/absolute_url;
+                   "
+                ></a>
+              </h2>
+            </div>
+            <h3 i18n:translate="">Zinegotziak</h3>
+            <div class="row"
+                 tal:define="
+                   zinegotziak element/zinegotziak;
+                 "
+                 tal:condition="nocall:zinegotziak"
+            >
+
+              <div class="col-md-3 col-xs-6"
+                   tal:repeat="zinegotzia zinegotziak"
+              >
+
+                <img class="border border-6 imagesicer mb-3"
+                     sizes="(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw"
+                     tal:define="
+                       scale nocall:zinegotzia/@@images;
+                     "
+                     tal:replace="structure python:scale.srcset(
+                    fieldname='image',
+                    sizes='(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw',
+                    css_class='border border-6 imagesicer mb-3',
+                    alt=zinegotzia.Title(),
+                    title=zinegotzia.Title()
+                   )"
+                />
+
+                <h4>
+                  <a tal:content="zinegotzia/title"
+                     tal:attributes="
+                       href zinegotzia/absolute_url;
+                     "
+                  ></a>
+                </h4>
+              </div>
+            </div>
+          </tal:repeatalderdia>
+        </tal:define>
+
+
+      </metal:block>
+    </metal:content-core>
+  </body>
+
+</html>

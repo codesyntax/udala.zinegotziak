@@ -1,0 +1,85 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="udala.zinegotziak"
+>
+
+  <body>
+
+    <metal:custom_title fill-slot="content-title">
+      <h1 tal:replace="structure context/@@title"></h1>
+
+      <!-- @@title view template: -->
+      <!--
+    <h1 tal:define="title context/Title" tal:condition="title" tal:content="title">
+      Title or id
+    </h1>
+    -->
+
+    </metal:custom_title>
+
+    <metal:custom_description fill-slot="content-description">
+      <p tal:replace="structure context/@@description"></p>
+    </metal:custom_description>
+
+    <metal:content-core fill-slot="content-core">
+      <metal:block define-macro="content-core">
+
+        <div id="parent-fieldname-text-batzordea"
+             tal:define="
+               toc context/table_of_contents|nothing;
+             "
+             tal:condition="context/text"
+             tal:content="structure python:context.text.output_relative_to(view.context)"
+             tal:attributes="
+               class python: toc and 'pat-autotoc' or '';
+             "
+        >
+        </div>
+
+        <h2 i18n:translate="">Kideak</h2>
+        <div class="row"
+             id="kideak"
+        >
+          <tal:item repeat="kidea view/get_kideak">
+            <div class="col-md-3 col-xs-6">
+              <a tal:define="
+                   item nocall:kidea/item;
+                   scale item/@@images;
+                 "
+                 tal:attributes="
+                   href kidea/zinegotzia_url;
+                 "
+              >
+                <img class="border border-6 imagesicer mb-3"
+                     sizes=""
+                     tal:replace="structure python:scale.srcset(
+                      fieldname='image',
+                      sizes='(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw',
+                      alt=item.Title(),
+                      title=item.Title(),
+                    )"
+                /></a>
+
+              <h6 class="mb-1">
+                <a tal:content="kidea/zinegotzia_title"
+                   tal:attributes="
+                     href kidea/zinegotzia_url;
+                   "
+                ></a>
+              </h6>
+              <p class="text-black-50">
+                <span tal:content="kidea/kargua">Kargua</span><br />
+                <span tal:content="kidea/alderdia">Kargua</span><br />
+              </p>
+            </div>
+          </tal:item>
+        </div>
+
+      </metal:block>
+    </metal:content-core>
+  </body>
+
+</html>

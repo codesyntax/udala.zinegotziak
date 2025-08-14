@@ -1,0 +1,302 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="udala.zinegotziak"
+>
+
+  <body>
+
+    <metal:content-core fill-slot="main">
+      <metal:block define-macro="main">
+
+        <main id="replace-content"
+              tal:define="
+                datuak view/datuak;
+              "
+        >
+          <div class="row">
+            <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-end">
+              <img class="border border-6 mb-3"
+                   sizes="(min-width: 350px) 400px,100vw"
+                   tal:define="
+                     item nocall:datuak/alderdia;
+                     scale item/@@images;
+                   "
+                   tal:replace="structure python:scale.srcset(
+                      fieldname='image',
+                      sizes='(min-width: 350px) 100px,100vw',
+                      css_class='border border-6 mb-3',
+                      alt=item.Title(),
+                      title=item.Title()
+                   )"
+              />
+              <img class="border border-6 mb-3"
+                   sizes="(min-width: 350px) 400px,100vw"
+                   tal:define="
+                     scale nocall:context/@@images;
+                   "
+                   tal:replace="structure python:scale.srcset(
+                   fieldname='image',
+                   sizes='(min-width: 350px) 400px,100vw',
+                   css_class='border border-6 mb-3',
+                   alt=context.Title(),
+                   title=context.Title()
+                   )"
+              />
+
+
+              <div class="col-md-12">
+
+                <ul class="social-network list-inline mt-3"
+                    tal:define="
+                      sociallinks context/sociallinks;
+                    "
+                    tal:condition="sociallinks"
+                >
+                  <li class="list-inline-item"
+                      tal:repeat="sociallink sociallinks"
+                  ><a class="rounded-circle bg-gray text-light p-3"
+                       title="Facebook"
+                       tal:attributes="
+                         href sociallink/url;
+                         title sociallink/name;
+                       "
+                    ><i class="fa fa-facebook"
+                         tal:attributes="
+                           class string:fa fa-${sociallink/cssclass};
+                         "
+                      ></i></a>
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+            <div class="col-md-8 order-sm-1">
+
+              <h1 tal:content="context/Title"></h1>
+
+              <div class="documentDescription description"
+                   tal:content="context/Description"
+              ></div>
+
+              <div id="parent-fieldname-text"
+                   tal:define="
+                     toc context/table_of_contents|nothing;
+                   "
+                   tal:condition="context/text"
+                   tal:content="structure python:context.text.output_relative_to(view.context)"
+                   tal:attributes="
+                     class python: toc and 'pat-autotoc' or '';
+                   "
+              >
+              </div>
+
+              <div id="karguak">
+                <h3 i18n:translate="">Karguak</h3>
+                <ul>
+                  <li tal:repeat="kargua view/get_karguak">
+                    <strong tal:content="python:kargua[0]">Burua</strong>:
+                    <tal:item repeat="item python:kargua[1]">
+                      <a href=""
+                         tal:content="item/batzordea"
+                         tal:attributes="
+                           href item/batzordea_url;
+                         "
+                      >
+                      Hau eta bestea
+                      </a><span tal:condition="not:repeat/item/end">,</span>
+                    </tal:item>
+                  </li>
+                </ul>
+              </div>
+              <div id="parent-fieldname-text-bestelako_karguak"
+                   tal:define="
+                     toc context/table_of_contents|nothing;
+                   "
+                   tal:condition="context/bestelako_karguak"
+                   tal:content="structure python:context.bestelako_karguak.output_relative_to(view.context)"
+                   tal:attributes="
+                     class python: toc and 'pat-autotoc' or '';
+                   "
+              >
+              </div>
+
+            </div>
+          </div>
+          <div class="accordion"
+               id="accordionZinegotzia"
+          >
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        aria-controls="collapseOne"
+                        type="button"
+                        data-bs-target="#collapseOne"
+                        data-bs-toggle="collapse"
+                        i18n:translate=""
+                >
+                CV
+                </button>
+              </h2>
+              <div class="accordion-collapse collapse"
+                   id="collapseOne"
+                   data-bs-parent="#accordionZinegotzia"
+              >
+                <div class="accordion-body">
+                  <div id="parent-fieldname-text-cv_text"
+                       tal:define="
+                         toc context/table_of_contents|nothing;
+                       "
+                       tal:condition="context/cv_text"
+                       tal:content="structure python:context.cv_text.output_relative_to(view.context)"
+                       tal:attributes="
+                         class python: toc and 'pat-autotoc' or '';
+                       "
+                  >
+                  </div>
+                  <div class="fitxategia"
+                       tal:condition="nocall:context/cv_file"
+                  >
+                    <a class="btn btn-primary"
+                       tal:attributes="
+                         href string:${context/absolute_url}/@@download/cv_file;
+                       "
+                    >Pdf-a deskargatu</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        aria-controls="collapseTwo"
+                        type="button"
+                        data-bs-target="#collapseTwo"
+                        data-bs-toggle="collapse"
+                        i18n:translate=""
+                >
+                Diru sarrerak
+                </button>
+              </h2>
+              <div class="accordion-collapse collapse"
+                   id="collapseTwo"
+                   data-bs-parent="#accordionZinegotzia"
+              >
+                <div class="accordion-body">
+                  <div id="parent-fieldname-text-dirusarrerak_text"
+                       tal:define="
+                         toc context/table_of_contents|nothing;
+                       "
+                       tal:condition="context/dirusarrerak_text"
+                       tal:content="structure python:context.dirusarrerak_text.output_relative_to(view.context)"
+                       tal:attributes="
+                         class python: toc and 'pat-autotoc' or '';
+                       "
+                  >
+                  </div>
+                  <div class="fitxategia"
+                       tal:condition="nocall:context/dirusarrerak_file"
+                  >
+                    <a class="btn btn-primary"
+                       tal:attributes="
+                         href string:${context/absolute_url}/@@download/dirusarrerak_file;
+                       "
+                    >Pdf-a
+                      deskargatu</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        aria-controls="collapseThree"
+                        type="button"
+                        data-bs-target="#collapseThree"
+                        data-bs-toggle="collapse"
+                        i18n:translate=""
+                >
+                Ondasunen aitorpena
+                </button>
+              </h2>
+              <div class="accordion-collapse collapse"
+                   id="collapseThree"
+                   data-bs-parent="#accordionZinegotzia"
+              >
+                <div class="accordion-body">
+                  <div id="parent-fieldname-text-ondasunenaitorpena_text"
+                       tal:define="
+                         toc context/table_of_contents|nothing;
+                       "
+                       tal:condition="context/ondasunenaitorpena_text"
+                       tal:content="structure python:context.ondasunenaitorpena_text.output_relative_to(view.context)"
+                       tal:attributes="
+                         class python: toc and 'pat-autotoc' or '';
+                       "
+                  >
+                  </div>
+                  <div class="fitxategia"
+                       tal:condition="nocall:context/ondasunenaitorpena_file"
+                  >
+                    <a class="btn btn-primary"
+                       tal:attributes="
+                         href string:${context/absolute_url}/@@download/ondasunenaitorpena_file;
+                       "
+                    >Pdf-a
+                      deskargatu</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed"
+                        aria-controls="collapseFour"
+                        type="button"
+                        data-bs-target="#collapseFour"
+                        data-bs-toggle="collapse"
+                        i18n:translate=""
+                >
+                Jardueren aitorpena
+                </button>
+              </h2>
+              <div class="accordion-collapse collapse"
+                   id="collapseFour"
+                   data-bs-parent="#accordionZinegotzia"
+              >
+                <div class="accordion-body">
+                  <div id="parent-fieldname-text-jarduerenaitorpena_text"
+                       tal:define="
+                         toc context/table_of_contents|nothing;
+                       "
+                       tal:condition="context/jarduerenaitorpena_text"
+                       tal:content="structure python:context.jarduerenaitorpena_text.output_relative_to(view.context)"
+                       tal:attributes="
+                         class python: toc and 'pat-autotoc' or '';
+                       "
+                  >
+                  </div>
+                  <div class="fitxategia"
+                       tal:condition="nocall:context/jarduerenaitorpena_file"
+                  >
+                    <a class="btn btn-primary"
+                       tal:attributes="
+                         href string:${context/absolute_url}/@@download/jarduerenaitorpena_file;
+                       "
+                    >Pdf-a
+                      deskargatu</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+
+      </metal:block>
+    </metal:content-core>
+  </body>
+
+</html>

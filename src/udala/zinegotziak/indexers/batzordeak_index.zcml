@@ -1,0 +1,9 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <adapter factory=".batzordeak_index.dummy"
+    name="batzordeak_index" />
+
+  <adapter factory=".batzordeak_index.batzordeak_index"
+    name="batzordeak_index" />
+
+</configure>
