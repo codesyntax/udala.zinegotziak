@@ -4,5 +4,11 @@
 >
 
   <!-- -*- extra stuff goes here -*- -->
-
+  <record name="plone.displayed_types" interface="plone.base.interfaces.controlpanel.INavigationSchema" field="displayed_types">
+    <value purge="false">
+      <element>Alderdia</element>
+      <element>Batzordea</element>
+      <element>Zinegotzia</element>
+    </value>
+  </record>
 </registry>
