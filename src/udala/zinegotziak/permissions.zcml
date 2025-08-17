@@ -8,20 +8,20 @@
   <configure zcml:condition="installed AccessControl.security">
     <!-- -*- extra stuff goes here -*- -->
     <permission
-        id="udala.zinegotziak.AddZinegotzia"
-        title="udala.zinegotziak: Add Zinegotzia"
+        id="udala.zinegotziak.AddCouncillor"
+        title="udala.zinegotziak: Add Councillor"
         />
 
 
     <permission
-        id="udala.zinegotziak.AddBatzordea"
-        title="udala.zinegotziak: Add Batzordea"
+        id="udala.zinegotziak.AddCommission"
+        title="udala.zinegotziak: Add Commission"
         />
 
 
     <permission
-        id="udala.zinegotziak.AddAlderdia"
-        title="udala.zinegotziak: Add Alderdia"
+        id="udala.zinegotziak.AddParty"
+        title="udala.zinegotziak: Add Party"
         />
   </configure>
 </configure>

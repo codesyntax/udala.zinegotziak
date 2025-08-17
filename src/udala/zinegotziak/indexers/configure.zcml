@@ -5,9 +5,8 @@
 
   <!-- -*- extra stuff goes here -*- -->
 
-  <include file="batzordeak_index.zcml" />
+  <include file="commissions_index.zcml" />
 
-  <include file="alderdia.zcml" />
 
 
 </configure>

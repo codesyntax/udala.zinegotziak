@@ -1,0 +1,18 @@
+<configure xmlns="http://namespaces.zope.org/zope">
+
+  <!-- Commissions are edited in a councillor but in a datagridfield
+       this avoids having them indexed in the relation catalog
+       so we can't query them using api.relation.get :(
+  -->
+
+  <adapter
+      factory=".commissions_index.dummy"
+      name="commissions_index"
+      />
+
+  <adapter
+      factory=".commissions_index.commissions_index"
+      name="commissions_index"
+      />
+
+</configure>

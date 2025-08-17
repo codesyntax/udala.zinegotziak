@@ -1,6 +1,3 @@
-#--- PLEASE EDIT THE LINES BELOW CORRECTLY ---
-#SOME DESCRIPTIVE TITLE.
-#FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
@@ -12,182 +9,182 @@ msgstr ""
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0\n"
-"Language-Code: en\n"
-"Language-Name: English\n"
+"Language-Code: es\n"
+"Language-Name: Spanish\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: udala.zinegotziak\n"
 
 #: udala/zinegotziak/content/councillor.py:151
 #: udala/zinegotziak/views/councillor_view.pt:267
 msgid "Activities declaration"
-msgstr ""
+msgstr "Declaración de causas de incompatibilidad y de actividades"
 
 #: udala/zinegotziak/content/councillor.py:160
 msgid "Activities declaration file"
-msgstr ""
+msgstr "Declaración de causas de incompatibilidad y de actividades (archivo)"
 
 #: udala/zinegotziak/content/councillor.py:134
 #: udala/zinegotziak/views/councillor_view.pt:221
 msgid "Assets declaration"
-msgstr ""
+msgstr "Declaración de bienes"
 
 #: udala/zinegotziak/content/councillor.py:143
 msgid "Assets declaration file"
-msgstr ""
+msgstr "Declaración de bienes (archivo)"
 
 #: udala/zinegotziak/content/councillor.py:106
 #: udala/zinegotziak/views/councillor_view.pt:129
 msgid "CV"
-msgstr ""
+msgstr "CV"
 
 #: udala/zinegotziak/content/councillor.py:114
 msgid "CV file"
-msgstr ""
+msgstr "CV (archivo)"
 
 #: udala/zinegotziak/content/councillor.py:49
 #: udala/zinegotziak/profiles/default/types/Commission.xml
 msgid "Commission"
-msgstr ""
+msgstr "Comisión"
 
 #: udala/zinegotziak/views/commission_view.pt:26
 msgid "Commission members"
-msgstr ""
+msgstr "Miembros de la comisión"
 
 #: udala/zinegotziak/profiles/default/types/Councillor.xml
 msgid "Councillor"
-msgstr ""
+msgstr "Concejal"
 
 #: udala/zinegotziak/views/configure.zcml:21
 msgid "Councillor listing"
-msgstr ""
+msgstr "Listado de concejales"
 
 #: udala/zinegotziak/views/councillors_view.pt:46
 msgid "Councillors"
-msgstr ""
+msgstr "Concejales"
 
 #: udala/zinegotziak/views/councillor_view.pt:163
 msgid "Download file"
-msgstr ""
+msgstr "Descargar archivo"
 
 #: udala/zinegotziak/content/councillor.py:120
 #: udala/zinegotziak/views/councillor_view.pt:175
 msgid "Earnings"
-msgstr ""
+msgstr "Entradas económicas"
 
 #: udala/zinegotziak/content/councillor.py:128
 msgid "Earnings file"
-msgstr ""
+msgstr "Entradas enconómicas (archivo)"
 
 #: udala/zinegotziak/content/councillor.py:152
 msgid "Enter the activities declaration of this councillor. You can also attach a file below."
-msgstr ""
+msgstr "Introducir la declaración de actividades de este concejal. Se puede adjuntar un archivo más abajo."
 
 #: udala/zinegotziak/content/councillor.py:135
 msgid "Enter the assets declaration of this councillor. You can also attach a file below."
-msgstr ""
+msgstr "Introducir la declaración de bienes de este concejal. Se puede adjuntar un archivo más abajo."
 
 #: udala/zinegotziak/content/councillor.py:121
 msgid "Enter the earnings of this councillor. You can also attach a file below."
-msgstr ""
+msgstr "Introducir las entradas económicas de este concejal. Se puede adjuntar un archivo más abajo."
 
 #: udala/zinegotziak/content/councillor.py:32
 msgid "Ex.: Member, President, Councillor, ..."
-msgstr ""
+msgstr "P.ej.: Miembro, Presidente, Teniente de alcalde, ..."
 
 #: udala/zinegotziak/content/councillor.py:26
 msgid "Icon name"
-msgstr ""
+msgstr "Nombre del icono"
 
 #: udala/zinegotziak/views/party_view.pt:36
 msgid "Members"
-msgstr ""
+msgstr "Miembros"
 
 #: udala/zinegotziak/content/councillor.py:24
 msgid "Name of social network"
-msgstr ""
+msgstr "Nombre de la red social"
 
 #: udala/zinegotziak/content/councillor.py:35
 msgid "Order"
-msgstr ""
+msgstr "Orden"
 
 #: udala/zinegotziak/content/councillor.py:100
 msgid "Other positions"
-msgstr ""
+msgstr "Otros cargos"
 
 #: udala/zinegotziak/profiles.zcml:13
 msgid "Package to configure a new udala.zinegotziak site"
-msgstr ""
+msgstr "Paquete para configurar udala.zinegotziak"
 
 #: udala/zinegotziak/content/councillor.py:84
 #: udala/zinegotziak/profiles/default/types/Party.xml
 msgid "Party"
-msgstr ""
+msgstr "Partido"
 
 #: udala/zinegotziak/content/councillor.py:92
 msgid "Position"
-msgstr ""
+msgstr "Cargo"
 
 #: udala/zinegotziak/content/councillor.py:31
 msgid "Position name"
-msgstr ""
+msgstr "Nombre del cargo"
 
 #: udala/zinegotziak/content/councillor.py:91
 #: udala/zinegotziak/views/councillor_view.pt:93
 msgid "Positions"
-msgstr ""
+msgstr "Cargos"
 
 #: udala/zinegotziak/content/councillor.py:61
 msgid "Social network link"
-msgstr ""
+msgstr "Enlace a red social"
 
 #: udala/zinegotziak/content/councillor.py:60
 msgid "Social network links"
-msgstr ""
+msgstr "Enlaces a redes sociales"
 
 #: udala/zinegotziak/content/councillor.py:36
 msgid "The order in which this councillor will be shown in the selected Commission"
-msgstr ""
+msgstr "El orden en el que este concejal se mostrará en la Comisión"
 
 #: udala/zinegotziak/views/councillor_view.pt:144
 msgid "There is no related information"
-msgstr ""
+msgstr "No hay información"
 
 #: udala/zinegotziak/content/councillor.py:25
 msgid "URL of social network"
-msgstr ""
+msgstr "URL de la red social"
 
 #: udala/zinegotziak/profiles.zcml:21
 msgid "Uninstall udala.zinegotziak setup."
-msgstr ""
+msgstr "Desinstalar udala.zinegotziak."
 
 #: udala/zinegotziak/content/councillor.py:115
 msgid "Upload the file with the CV of this councillor."
-msgstr ""
+msgstr "Cargar el archivo con el CV de este concejal."
 
 #: udala/zinegotziak/content/councillor.py:161
 msgid "Upload the file with the activities declaration of this councillor."
-msgstr ""
+msgstr "Cargar el archivo con la declaración de actividades de este concejal."
 
 #: udala/zinegotziak/content/councillor.py:144
 msgid "Upload the file with the assets declaration of this councillor."
-msgstr ""
+msgstr "Cargar el archivo con la declaración de bienes de este concejal."
 
 #: udala/zinegotziak/content/councillor.py:129
 msgid "Upload the file with the earning details of this councillor."
-msgstr ""
+msgstr "Cargar el archivo con las entradas económicas de este concejal."
 
 #: udala/zinegotziak/content/councillor.py:101
 msgid "Write here any other position that this councillor holds"
-msgstr ""
+msgstr "Introducir aquí otros cargos de este concejal. Por ejemplo los que tenga fuera de este Ayuntamiento."
 
 #: udala/zinegotziak/content/councillor.py:107
 msgid "Write here the CV of this councillor. You can also attach a file below."
-msgstr ""
+msgstr "Introducir aquí el CV de este concejal. Se puede adjuntar un archivo más abajo."
 
 #: udala/zinegotziak/profiles.zcml:13
 msgid "udala.zinegotziak: Install"
-msgstr ""
+msgstr "udala.zinegotziak: instalar"
 
 #: udala/zinegotziak/profiles.zcml:21
 msgid "udala.zinegotziak: Uninstall"
-msgstr ""
+msgstr "udala.zinegotziak: desinstalar"

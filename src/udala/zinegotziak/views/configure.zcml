@@ -12,37 +12,37 @@
   <browser:page
       name="zinegotziak-view"
       for="plone.app.contenttypes.interfaces.IFolder"
-      class=".zinegotziak_view.ZinegotziakView"
-      template="zinegotziak_view.pt"
+      class=".councillors_view.CouncillorsView"
+      template="councillors_view.pt"
       permission="zope2.View"
       layer="udala.zinegotziak.interfaces.IBrowserLayer"
       menu="plone_displayviews"
-      title="Zinegotziak"
+      title="Councillor listing"
       />
 
   <browser:page
       name="view"
-      for="udala.zinegotziak.content.alderdia.IAlderdia"
-      class=".alderdia_view.AlderdiaView"
-      template="alderdia_view.pt"
+      for="udala.zinegotziak.content.party.IParty"
+      class=".party_view.PartyView"
+      template="party_view.pt"
       permission="zope2.View"
       layer="udala.zinegotziak.interfaces.IBrowserLayer"
       />
 
   <browser:page
       name="view"
-      for="udala.zinegotziak.content.batzordea.IBatzordea"
-      class=".batzordea_view.BatzordeaView"
-      template="batzordea_view.pt"
+      for="udala.zinegotziak.content.commission.ICommission"
+      class=".commission_view.CommissionView"
+      template="commission_view.pt"
       permission="zope2.View"
       layer="udala.zinegotziak.interfaces.IBrowserLayer"
       />
 
   <browser:page
       name="view"
-      for="udala.zinegotziak.content.zinegotzia.IZinegotzia"
-      class=".zinegotzia_view.ZinegotziaView"
-      template="zinegotzia_view.pt"
+      for="udala.zinegotziak.content.councillor.ICouncillor"
+      class=".councillor_view.CouncillorView"
+      template="councillor_view.pt"
       permission="zope2.View"
       layer="udala.zinegotziak.interfaces.IBrowserLayer"
       />

@@ -1,0 +1,89 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="udala.zinegotziak"
+>
+
+  <body>
+
+    <metal:content-core fill-slot="main">
+      <metal:block define-macro="content-core">
+
+        <h1 tal:replace="structure context/@@title"></h1>
+
+
+        <div class="party d-flex align-items-center justify-content-between mb-4 mb-lg-5"
+             tal:define="
+               scale_func context/@@images;
+             "
+        >
+
+          <div id="parent-fieldname-text-party"
+               tal:define="
+                 toc context/table_of_contents|nothing;
+               "
+               tal:condition="context/text"
+               tal:content="structure python:context.text.output_relative_to(view.context)"
+               tal:attributes="
+                 class python: toc and 'pat-autotoc' or '';
+               "
+          >
+          </div>
+
+
+          <h2 class="m-0 ms-3"
+              i18n:translate=""
+          >Members</h2>
+
+          <img class="border border-6"
+               tal:condition="nocall:context/image"
+               tal:replace="structure python:scale_func.srcset(
+                fieldname='image',
+                sizes='(min-width: 350px) 400px,100vw',
+                css_class='border border-6',
+                alt=context.title,
+                title=context.title)"
+          />
+
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-xs-6"
+               tal:repeat="councillor context/get_councillors"
+          >
+
+            <a tal:define="
+                 scale nocall:councillor/@@images;
+               "
+               tal:attributes="
+                 href councillor/absolute_url;
+               "
+            >
+              <img class="border border-6 imagesicer mb-3"
+                   sizes="(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw"
+                   tal:condition="nocall:councillor/image"
+                   tal:replace="structure python:scale.srcset(
+                            fieldname='image',
+                            sizes='(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw',
+                            css_class='border border-6 imagesicer mb-3',
+                            alt=councillor.title,
+                            title=councillor.title)"
+              />
+            </a>
+
+            <h6>
+              <a tal:content="councillor/title"
+                 tal:attributes="
+                   href councillor/absolute_url;
+                 "
+              ></a>
+            </h6>
+          </div>
+        </div>
+
+      </metal:block>
+    </metal:content-core>
+  </body>
+
+</html>

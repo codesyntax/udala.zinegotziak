@@ -1,7 +1,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2022-05-25 17:12+0000\n"
+"POT-Creation-Date: 2025-08-17 19:02+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI +ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -13,3 +13,178 @@ msgstr ""
 "Language-Name: English\n"
 "Preferred-Encodings: utf-8 latin1\n"
 "Domain: udala.zinegotziak\n"
+
+#: udala/zinegotziak/content/councillor.py:151
+#: udala/zinegotziak/views/councillor_view.pt:267
+msgid "Activities declaration"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:160
+msgid "Activities declaration file"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:134
+#: udala/zinegotziak/views/councillor_view.pt:221
+msgid "Assets declaration"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:143
+msgid "Assets declaration file"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:106
+#: udala/zinegotziak/views/councillor_view.pt:129
+msgid "CV"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:114
+msgid "CV file"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:49
+#: udala/zinegotziak/profiles/default/types/Commission.xml
+msgid "Commission"
+msgstr ""
+
+#: udala/zinegotziak/views/commission_view.pt:26
+msgid "Commission members"
+msgstr ""
+
+#: udala/zinegotziak/profiles/default/types/Councillor.xml
+msgid "Councillor"
+msgstr ""
+
+#: udala/zinegotziak/views/configure.zcml:21
+msgid "Councillor listing"
+msgstr ""
+
+#: udala/zinegotziak/views/councillors_view.pt:46
+msgid "Councillors"
+msgstr ""
+
+#: udala/zinegotziak/views/councillor_view.pt:163
+msgid "Download file"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:120
+#: udala/zinegotziak/views/councillor_view.pt:175
+msgid "Earnings"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:128
+msgid "Earnings file"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:152
+msgid "Enter the activities declaration of this councillor. You can also attach a file below."
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:135
+msgid "Enter the assets declaration of this councillor. You can also attach a file below."
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:121
+msgid "Enter the earnings of this councillor. You can also attach a file below."
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:32
+msgid "Ex.: Member, President, Councillor, ..."
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:26
+msgid "Icon name"
+msgstr ""
+
+#: udala/zinegotziak/views/party_view.pt:36
+msgid "Members"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:24
+msgid "Name of social network"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:35
+msgid "Order"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:100
+msgid "Other positions"
+msgstr ""
+
+#: udala/zinegotziak/profiles.zcml:13
+msgid "Package to configure a new udala.zinegotziak site"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:84
+#: udala/zinegotziak/profiles/default/types/Party.xml
+msgid "Party"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:92
+msgid "Position"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:31
+msgid "Position name"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:91
+#: udala/zinegotziak/views/councillor_view.pt:93
+msgid "Positions"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:61
+msgid "Social network link"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:60
+msgid "Social network links"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:36
+msgid "The order in which this councillor will be shown in the selected Commission"
+msgstr ""
+
+#: udala/zinegotziak/views/councillor_view.pt:144
+msgid "There is no related information"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:25
+msgid "URL of social network"
+msgstr ""
+
+#: udala/zinegotziak/profiles.zcml:21
+msgid "Uninstall udala.zinegotziak setup."
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:115
+msgid "Upload the file with the CV of this councillor."
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:161
+msgid "Upload the file with the activities declaration of this councillor."
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:144
+msgid "Upload the file with the assets declaration of this councillor."
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:129
+msgid "Upload the file with the earning details of this councillor."
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:101
+msgid "Write here any other position that this councillor holds"
+msgstr ""
+
+#: udala/zinegotziak/content/councillor.py:107
+msgid "Write here the CV of this councillor. You can also attach a file below."
+msgstr ""
+
+#: udala/zinegotziak/profiles.zcml:13
+msgid "udala.zinegotziak: Install"
+msgstr ""
+
+#: udala/zinegotziak/profiles.zcml:21
+msgid "udala.zinegotziak: Uninstall"
+msgstr ""
