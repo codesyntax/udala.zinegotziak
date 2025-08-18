@@ -1,0 +1,10 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    i18n_domain="udala.zinegotziak"
+    >
+
+  <!-- -*- extra stuff goes here -*- -->
+  <include package="plone.restapi" />
+  <adapter factory=".converter.commission_converter" />
+
+</configure>

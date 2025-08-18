@@ -18,6 +18,7 @@
 
   <include package=".indexers" />
   <include package=".views" />
+  <include package=".restapi" />
 
   <!-- -*- extra stuff goes here -*- -->
 

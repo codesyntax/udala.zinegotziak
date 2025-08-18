@@ -25,10 +25,11 @@ class CouncillorView(BrowserView):
 
             return url
 
-        for position in self.context.positions:
-            commission = position.get("commission")
-            yield {
-                "position": position.get("position"),
-                "commission_title": commission.Title(),
-                "commission_url": get_commmission_url(commission),
-            }
+        if self.context.positions:
+            for position in self.context.positions:
+                commission = position.get("commission")
+                yield {
+                    "position": position.get("position"),
+                    "commission_title": commission.Title(),
+                    "commission_url": get_commmission_url(commission),
+                }

@@ -51,7 +51,7 @@ class CommissionView(BrowserView):
             if get_commission_object(position.get("commission", None)) == self.context:
                 return {
                     "position": position.get("position"),
-                    "position_order": position.get("ordena", "1"),
+                    "position_order": position.get("order", "1"),
                     "councillor_order": getObjPositionInParent(councillor)(),
                     "councillor": councillor,
                 }

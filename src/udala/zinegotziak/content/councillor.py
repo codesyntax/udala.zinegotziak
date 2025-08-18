@@ -63,17 +63,17 @@ class ICouncillor(model.Schema):
             {
                 "name": "Twitter",
                 "url": "https://twitter.com/EibarkoUdala",
-                "cssclass": "twitter",
+                "iconname": "twitter",
             },
             {
                 "name": "FaceBook",
                 "url": "https://www.facebook.com/pages/Eibarko-Udala/371951916348590",
-                "cssclass": "facebook",
+                "iconname": "facebook",
             },
             {
                 "name": "Youtube",
                 "url": "https://www.youtube.com/channel/UCTNEPKwdQgEuhO0S4nUGaPw",
-                "cssclass": "youtube",
+                "iconname": "youtube",
             },
         ],
         required=False,

@@ -13,9 +13,10 @@ def dummy(obj):
 def commissions_index(obj):
     """Calculate and return the value for the indexer"""
     items = []
-    for position in obj.positions:
-        commission = position.get("commission", None)
-        if commission is not None:
-            items.append(commission.UID())
+    if obj.positions:
+        for position in obj.positions:
+            commission = position.get("commission", None)
+            if commission is not None:
+                items.append(commission.UID())
 
     return items

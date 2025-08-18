@@ -55,7 +55,7 @@
                 >
                   <li class="list-inline-item"
                       tal:repeat="sociallink sociallinks"
-                  ><a class="rounded-circle bg-gray text-light p-3"
+                  ><a class="rounded-circle p-3"
                        title="Facebook"
                        tal:attributes="
                          href sociallink/url;
