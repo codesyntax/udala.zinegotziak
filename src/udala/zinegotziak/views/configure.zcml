@@ -10,7 +10,7 @@
   <include package="plone.app.contentmenu" />
 
   <browser:page
-      name="zinegotziak-view"
+      name="councillors_view"
       for="plone.app.contenttypes.interfaces.IFolder"
       class=".councillors_view.CouncillorsView"
       template="councillors_view.pt"
@@ -18,6 +18,17 @@
       layer="udala.zinegotziak.interfaces.IBrowserLayer"
       menu="plone_displayviews"
       title="Councillor listing"
+      />
+
+  <browser:page
+      name="parties_view"
+      for="plone.app.contenttypes.interfaces.IFolder"
+      class=".parties_view.PartiesView"
+      template="parties_view.pt"
+      permission="zope2.View"
+      layer="udala.zinegotziak.interfaces.IBrowserLayer"
+      menu="plone_displayviews"
+      title="Party listing"
       />
 
   <browser:page

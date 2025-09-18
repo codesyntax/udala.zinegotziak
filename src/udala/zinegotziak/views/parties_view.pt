@@ -1,0 +1,58 @@
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="udala.zinegotziak"
+>
+
+  <body>
+
+    <metal:content-core fill-slot="content-core">
+      <metal:block define-macro="content-core">
+
+        <div id="parties"
+             tal:define="
+               parties_brains python:context.restrictedTraverse('@@contentlisting')(portal_type='Party');
+             "
+             tal:condition="parties_brains"
+        >
+
+          <div class="row">
+            <div class="col-md-4"
+                 tal:repeat="brain parties_brains"
+            >
+              <div class="mb-5"
+                   tal:define="
+                     item python:brain.getObject();
+                     images item/@@images;
+                   "
+              >
+                <div class="colection-item-image mb-3">
+                  <tal:img condition="python:item.image">
+                    <img tal:replace="structure python:images.srcset('image', scale_in_src='large', sizes='(min-width: 1400px) 200px, 90vw', alt=item.title, title=item.title, loading='lazy')" />
+                  </tal:img>
+
+                </div>
+
+
+                <h2 class="mb-2">
+                  <a class="text-dark no-underline"
+                     tal:content="item/title"
+                     tal:attributes="
+                       href item/absolute_url;
+                     "
+                  ></a>
+                </h2>
+              </div>
+            </div>
+          </div>
+
+
+
+
+        </div></metal:block>
+    </metal:content-core>
+  </body>
+
+</html>

@@ -17,25 +17,26 @@
                     tal:condition="parties"
         >
 
-          <tal:party tal:repeat="party parties">
+          <div class="party-content mb-5"
+               tal:repeat="party parties"
+          >
             <div class="party d-flex align-items-center mb-5">
 
 
               <img class="border border-6"
-                   sizes="(min-width: 350px) 400px,100vw"
+                   sizes="(min-width: 350px) 200px,100vw"
                    tal:define="
                      scale nocall:party/@@images;
                    "
                    tal:replace="structure python:scale.srcset(
                     fieldname='image',
-                    sizes='(min-width: 350px) 400px,100vw',
-                    css_class='border border-6',
+                    sizes='(min-width: 350px) 200px,100vw',
                     alt=party.Title(),
                     title=party.Title()
                    )"
               />
 
-              <h2 class="m-0">
+              <h2 class="mx-2">
                 <a tal:content="party/title"
                    tal:attributes="
                      href party/absolute_url;
@@ -56,14 +57,14 @@
               >
 
                 <img class="border border-6 imagesicer mb-3"
-                     sizes="(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw"
+                     sizes="(min-width: 1200px) 400px,(min-width: 992px) 400px,100vw"
                      tal:define="
                        scale nocall:councillor/@@images;
                      "
                      tal:condition="nocall:councillor/image"
                      tal:replace="structure python:scale.srcset(
                     fieldname='image',
-                    sizes='(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw',
+                    sizes='(min-width: 1200px) 400px,(min-width: 992px) 400px,100vw',
                     css_class='border border-6 imagesicer mb-3',
                     alt=councillor.Title(),
                     title=councillor.Title()
@@ -79,7 +80,7 @@
                 </h4>
               </div>
             </div>
-          </tal:party>
+          </div>
         </tal:define>
 
 
