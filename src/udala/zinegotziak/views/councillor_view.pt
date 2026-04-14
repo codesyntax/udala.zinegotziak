@@ -1,317 +1,266 @@
-<html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-      xmlns:metal="http://xml.zope.org/namespaces/metal"
-      xmlns:tal="http://xml.zope.org/namespaces/tal"
-      metal:use-macro="context/main_template/macros/master"
-      i18n:domain="udala.zinegotziak"
->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+  xmlns:metal="http://xml.zope.org/namespaces/metal" xmlns:tal="http://xml.zope.org/namespaces/tal"
+  metal:use-macro="context/main_template/macros/master" i18n:domain="udala.zinegotziak">
 
-  <body>
+<body>
 
-    <metal:content-core fill-slot="main">
-      <metal:block define-macro="main">
+  <metal:content-core fill-slot="main">
+    <metal:block define-macro="main" tal:define="icons python:context.restrictedTraverse('@@iconresolver');">
 
-        <main id="replace-content">
-          <div class="row">
-            <div class="col-sm-4 order-sm-2 d-flex flex-column align-items-end">
-              <img class="border border-6 mb-3"
-                   sizes="(min-width: 350px) 400px,100vw"
-                   tal:define="
-                     item context/get_party;
-                     scale item/@@images;
-                   "
-                   tal:condition="nocall:item/image"
-                   tal:replace="structure python:scale.srcset(
-                      fieldname='image',
-                      sizes='(min-width: 350px) 100px,100vw',
-                      css_class='border border-6 mb-3',
-                      alt=item.Title(),
-                      title=item.Title()
-                   )"
-              />
-              <img class="border border-6 mb-3"
-                   sizes="(min-width: 350px) 400px,100vw"
-                   tal:define="
-                     scale nocall:context/@@images;
-                   "
-                   tal:condition="nocall:context/image"
-                   tal:replace="structure python:scale.srcset(
-                   fieldname='image',
-                   sizes='(min-width: 350px) 400px,100vw',
-                   css_class='border border-6 mb-3',
-                   alt=context.Title(),
-                   title=context.Title()
-                   )"
-              />
+      <main id="replace-content" class="py-4">
+        <div class="row g-5">
 
+          <div class="col-md-4 col-lg-3 order-md-2">
+            <div class="card border-0 shadow-sm text-center p-4 sticky-md-top">
 
-              <div class="col-md-12">
+              <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-75 mx-auto shadow-sm mb-4">
+                <img class="object-fit-cover w-100 h-100" sizes="(min-width: 350px) 400px,100vw" tal:define="
+                         scale nocall:context/@@images;
+                       " tal:condition="nocall:context/image" tal:replace="structure python:scale.srcset(
+                       fieldname='image',
+                       sizes='(min-width: 350px) 400px,100vw',
+                       css_class='object-fit-cover w-100 h-100',
+                       alt=context.Title(),
+                       title=context.Title()
+                       )" />
+              </div>
 
-                <ul class="social-network list-inline mt-3"
-                    tal:define="
+              <div class="bg-light rounded p-2 mb-4 shadow-sm w-50 mx-auto">
+                <img class="img-fluid object-fit-contain" tal:define="
+                         item context/get_party;
+                         scale item/@@images;
+                       " tal:condition="nocall:item/image" tal:replace="structure python:scale.srcset(
+                          fieldname='image',
+                          sizes='(max-width: 500px) 100px, 150px',
+                          css_class='img-fluid object-fit-contain',
+                          alt=item.Title(),
+                          scale_in_src='thumb',
+                          title=item.Title()
+                       )" />
+                <div class="mt-2 fw-medium text-secondary small" tal:content="python:context.get_party().Title()">Party
+                  Name</div>
+              </div>
+
+              <ul class="social-network list-inline mb-0 d-flex justify-content-center gap-2 flex-wrap" tal:define="
                       sociallinks context/social_links;
-                    "
-                    tal:condition="sociallinks"
-                >
-                  <li class="list-inline-item"
-                      tal:repeat="sociallink sociallinks"
-                  ><a class="rounded-circle p-3"
-                       title="Facebook"
-                       tal:attributes="
+                    " tal:condition="sociallinks">
+                <li class="list-inline-item m-0" tal:repeat="sociallink sociallinks">
+                  <a class="btn btn-outline-primary rounded-circle d-flex align-items-center justify-content-center p-2 lh-1"
+                    title="Facebook" tal:attributes="
                          href sociallink/url;
                          title sociallink/name;
-                       "
-                    >
-                      <tal:icon tal:replace="structure python:icons.tag(sociallink['iconname'])" />
-                    </a>
-                  </li>
-                </ul>
-              </div>
-
-            </div>
-            <div class="col-md-8 order-sm-1">
-
-              <h1 tal:content="context/Title"></h1>
-
-              <div class="documentDescription description"
-                   tal:content="context/Description"
-              ></div>
-
-              <div id="parent-fieldname-text"
-                   tal:define="
-                     toc context/table_of_contents|nothing;
-                   "
-                   tal:condition="context/text"
-                   tal:content="structure python:context.text.output_relative_to(view.context)"
-                   tal:attributes="
-                     class python: toc and 'pat-autotoc' or '';
-                   "
-              >
-              </div>
-
-              <div id="positions">
-                <h3 i18n:translate="">Positions</h3>
-                <ul>
-                  <li tal:repeat="position view/get_positions">
-                    <strong tal:content="python:position[0]">President</strong>:
-                    <tal:item repeat="item python:position[1]">
-                      <a href=""
-                         tal:content="item/commission_title"
-                         tal:attributes="
-                           href item/commission_url;
-                         "
-                      >
-                      Commission name
-                      </a><span tal:condition="not:repeat/item/end">,</span>
-                    </tal:item>
-                  </li>
-                </ul>
-              </div>
-              <div id="parent-fieldname-text-other_positions"
-                   tal:define="
-                     toc context/table_of_contents|nothing;
-                   "
-                   tal:condition="context/other_positions"
-                   tal:content="structure python:context.other_positions.output_relative_to(view.context)"
-                   tal:attributes="
-                     class python: toc and 'pat-autotoc' or '';
-                   "
-              >
-              </div>
+                       " target="_blank" rel="noopener noreferrer">
+                    <tal:icon tal:content="structure python:icons.tag(sociallink['iconname'])" />
+                  </a>
+                </li>
+              </ul>
 
             </div>
           </div>
-          <div class="accordion"
-               id="councillor-accordion"
-          >
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        aria-controls="collapseOne"
-                        type="button"
-                        data-bs-target="#collapseOne"
-                        data-bs-toggle="collapse"
-                        i18n:translate=""
-                >
-                CV
-                </button>
-              </h2>
-              <div class="accordion-collapse collapse"
-                   id="collapseOne"
-                   data-bs-parent="#councillor-accordion"
-              >
-                <div class="accordion-body">
-                  <p tal:condition="python: not context.cv_text and not context.cv_file"
-                     i18n:translate=""
-                  >
-                    There is no related information
-                  </p>
-                  <div id="parent-fieldname-text-cv_text"
-                       tal:define="
-                         toc context/table_of_contents|nothing;
-                       "
-                       tal:condition="context/cv_text"
-                       tal:content="structure python:context.cv_text.output_relative_to(view.context)"
-                       tal:attributes="
-                         class python: toc and 'pat-autotoc' or '';
-                       "
-                  >
-                  </div>
-                  <div class="file"
-                       tal:condition="nocall:context/cv_file"
-                  >
-                    <a class="btn btn-primary"
-                       tal:attributes="
-                         href string:${context/absolute_url}/@@download/cv_file;
-                       "
-                       i18n:translate=""
-                    >Download file</a>
+
+          <div class="col-md-8 col-lg-9 order-md-1">
+
+            <h1 tal:content="context/Title"></h1>
+
+            <p class="lead text-secondary mb-4 pb-3 border-bottom" tal:condition="context/Description"
+              tal:content="context/Description"></p>
+
+            <div id="parent-fieldname-text" class="mb-5" tal:define="
+                     toc context/table_of_contents|nothing;
+                   " tal:condition="context/text"
+              tal:content="structure python:context.text.output_relative_to(view.context)" tal:attributes="
+                     class python: toc and 'pat-autotoc mb-5' or 'mb-5';
+                   ">
+            </div>
+
+            <div class="card shadow-sm border-0 mb-5 bg-light">
+              <div class="card-body p-4">
+                <h3 class="h4 mb-4 d-flex align-items-center" i18n:translate="">
+                  <span class="me-2 d-flex align-items-center"
+                    tal:content="structure python:icons.tag('briefcase')"></span>
+                  Positions
+                </h3>
+                <ul class="list-unstyled mb-0">
+                  <li tal:repeat="position view/get_positions"
+                    tal:attributes="class python: 'mb-0' if repeat['position'].end else 'mb-3 pb-3 border-bottom border-secondary border-opacity-25'">
+                    <strong class="d-block mb-1 fs-5" tal:content="python:position[0]">President</strong>
+                    <div class="d-flex flex-wrap gap-2">
+                      <tal:item repeat="item python:position[1]">
+                        <a class="btn btn-outline-secondary btn-sm rounded-pill px-3 text-dark border-secondary border-opacity-25 shadow-sm"
+                          href="" tal:content="item/commission_title" tal:attributes="
+                               href item/commission_url;
+                             ">
+                          Commission name
+                        </a>
+                      </tal:item>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div id="parent-fieldname-text-other_positions" class="mb-5" tal:define="
+                     toc context/table_of_contents|nothing;
+                   " tal:condition="context/other_positions"
+              tal:content="structure python:context.other_positions.output_relative_to(view.context)" tal:attributes="
+                     class python: toc and 'pat-autotoc mb-5' or 'mb-5';
+                   ">
+            </div>
+
+            <div class="accordion shadow-sm" id="councillor-accordion">
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold fs-5 bg-white" aria-controls="collapseOne"
+                    type="button" data-bs-target="#collapseOne" data-bs-toggle="collapse" i18n:translate="">
+                    CV
+                  </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="collapseOne" data-bs-parent="#councillor-accordion">
+                  <div class="accordion-body bg-light">
+                    <div class="alert alert-info d-flex align-items-center"
+                      tal:condition="python: not context.cv_text and not context.cv_file" i18n:translate="">
+                      <span class="fs-4 me-3 d-flex align-items-center"
+                        tal:content="structure python:icons.tag('info-circle')"></span>
+                      There is no related information
+                    </div>
+                    <div id="parent-fieldname-text-cv_text" tal:define="
+                             toc context/table_of_contents|nothing;
+                           " tal:condition="context/cv_text"
+                      tal:content="structure python:context.cv_text.output_relative_to(view.context)" tal:attributes="
+                             class python: toc and 'pat-autotoc' or '';
+                           ">
+                    </div>
+                    <div class="file mt-3" tal:condition="nocall:context/cv_file">
+                      <a class="btn btn-outline-primary d-inline-flex align-items-center gap-2" tal:attributes="
+                             href string:${context/absolute_url}/@@download/cv_file;
+                           " i18n:translate="">
+                        <span class="fs-5 d-flex align-items-center"
+                          tal:content="structure python:icons.tag('download')"></span>
+                        Download file
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        aria-controls="collapseTwo"
-                        type="button"
-                        data-bs-target="#collapseTwo"
-                        data-bs-toggle="collapse"
-                        i18n:translate=""
-                >
-                Earnings
-                </button>
-              </h2>
-              <div class="accordion-collapse collapse"
-                   id="collapseTwo"
-                   data-bs-parent="#councillor-accordion"
-              >
-                <div class="accordion-body">
-                  <p tal:condition="python: not context.earnings_text and not context.earnings_file"
-                     i18n:translate=""
-                  >
-                    There is no related information
-                  </p>
-                  <div id="parent-fieldname-text-earnings"
-                       tal:define="
-                         toc context/table_of_contents|nothing;
-                       "
-                       tal:condition="context/earnings_text"
-                       tal:content="structure python:context.earnings_text.output_relative_to(view.context)"
-                       tal:attributes="
-                         class python: toc and 'pat-autotoc' or '';
-                       "
-                  >
-                  </div>
-                  <div class="file"
-                       tal:condition="nocall:context/earnings_file"
-                  >
-                    <a class="btn btn-primary"
-                       tal:attributes="
-                         href string:${context/absolute_url}/@@download/earnings_file;
-                       "
-                       i18n:translate=""
-                    >Download file</a>
+
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold fs-5 bg-white" aria-controls="collapseTwo"
+                    type="button" data-bs-target="#collapseTwo" data-bs-toggle="collapse" i18n:translate="">
+                    Earnings
+                  </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="collapseTwo" data-bs-parent="#councillor-accordion">
+                  <div class="accordion-body bg-light">
+                    <div class="alert alert-info d-flex align-items-center"
+                      tal:condition="python: not context.earnings_text and not context.earnings_file" i18n:translate="">
+                      <span class="fs-4 me-3 d-flex align-items-center"
+                        tal:content="structure python:icons.tag('info-circle')"></span>
+                      There is no related information
+                    </div>
+                    <div id="parent-fieldname-text-earnings" tal:define="
+                             toc context/table_of_contents|nothing;
+                           " tal:condition="context/earnings_text"
+                      tal:content="structure python:context.earnings_text.output_relative_to(view.context)"
+                      tal:attributes="
+                             class python: toc and 'pat-autotoc' or '';
+                           ">
+                    </div>
+                    <div class="file mt-3" tal:condition="nocall:context/earnings_file">
+                      <a class="btn btn-outline-primary d-inline-flex align-items-center gap-2" tal:attributes="
+                             href string:${context/absolute_url}/@@download/earnings_file;
+                           " i18n:translate="">
+                        <span class="fs-5 d-flex align-items-center"
+                          tal:content="structure python:icons.tag('download')"></span>
+                        Download file
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        aria-controls="collapseThree"
-                        type="button"
-                        data-bs-target="#collapseThree"
-                        data-bs-toggle="collapse"
-                        i18n:translate=""
-                >
-                Assets declaration
-                </button>
-              </h2>
-              <div class="accordion-collapse collapse"
-                   id="collapseThree"
-                   data-bs-parent="#councillor-accordion"
-              >
-                <div class="accordion-body">
-                  <p tal:condition="python: not context.assets_declaration_text and not context.assets_declaration_file"
-                     i18n:translate=""
-                  >
-                    There is no related information
-                  </p>
-                  <div id="parent-fieldname-text-assets_declaration_text"
-                       tal:define="
-                         toc context/table_of_contents|nothing;
-                       "
-                       tal:condition="context/assets_declaration_text"
-                       tal:content="structure python:context.assets_declaration_text.output_relative_to(view.context)"
-                       tal:attributes="
-                         class python: toc and 'pat-autotoc' or '';
-                       "
-                  >
-                  </div>
-                  <div class="file"
-                       tal:condition="nocall:context/assets_declaration_file"
-                  >
-                    <a class="btn btn-primary"
-                       tal:attributes="
-                         href string:${context/absolute_url}/@@download/assets_declaration_file;
-                       "
-                       i18n:translate=""
-                    >Download file</a>
+
+              <div class="accordion-item border-0 border-bottom">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold fs-5 bg-white" aria-controls="collapseThree"
+                    type="button" data-bs-target="#collapseThree" data-bs-toggle="collapse" i18n:translate="">
+                    Assets declaration
+                  </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="collapseThree" data-bs-parent="#councillor-accordion">
+                  <div class="accordion-body bg-light">
+                    <div class="alert alert-info d-flex align-items-center"
+                      tal:condition="python: not context.assets_declaration_text and not context.assets_declaration_file"
+                      i18n:translate="">
+                      <span class="fs-4 me-3 d-flex align-items-center"
+                        tal:content="structure python:icons.tag('info-circle')"></span>
+                      There is no related information
+                    </div>
+                    <div id="parent-fieldname-text-assets_declaration_text" tal:define="
+                             toc context/table_of_contents|nothing;
+                           " tal:condition="context/assets_declaration_text"
+                      tal:content="structure python:context.assets_declaration_text.output_relative_to(view.context)"
+                      tal:attributes="
+                             class python: toc and 'pat-autotoc' or '';
+                           ">
+                    </div>
+                    <div class="file mt-3" tal:condition="nocall:context/assets_declaration_file">
+                      <a class="btn btn-outline-primary d-inline-flex align-items-center gap-2" tal:attributes="
+                             href string:${context/absolute_url}/@@download/assets_declaration_file;
+                           " i18n:translate="">
+                        <span class="fs-5 d-flex align-items-center"
+                          tal:content="structure python:icons.tag('download')"></span>
+                        Download file
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header">
-                <button class="accordion-button collapsed"
-                        aria-controls="collapseFour"
-                        type="button"
-                        data-bs-target="#collapseFour"
-                        data-bs-toggle="collapse"
-                        i18n:translate=""
-                >
-                Activities declaration
-                </button>
-              </h2>
-              <div class="accordion-collapse collapse"
-                   id="collapseFour"
-                   data-bs-parent="#councillor-accordion"
-              >
-                <div class="accordion-body">
-                  <p tal:condition="python: not context.activities_declaration_text and not context.activities_declaration_file"
-                     i18n:translate=""
-                  >
-                    There is no related information
-                  </p>
-                  <div id="parent-fieldname-text-activities_declaration_text"
-                       tal:define="
-                         toc context/table_of_contents|nothing;
-                       "
-                       tal:condition="context/activities_declaration_text"
-                       tal:content="structure python:context.activities_declaration_text.output_relative_to(view.context)"
-                       tal:attributes="
-                         class python: toc and 'pat-autotoc' or '';
-                       "
-                  >
-                  </div>
-                  <div class="fitxategia"
-                       tal:condition="nocall:context/activities_declaration_file"
-                  >
-                    <a class="btn btn-primary"
-                       tal:attributes="
-                         href string:${context/absolute_url}/@@download/activities_declaration_file;
-                       "
-                       i18n:translate=""
-                    >Download file</a>
+
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button class="accordion-button collapsed fw-bold fs-5 bg-white" aria-controls="collapseFour"
+                    type="button" data-bs-target="#collapseFour" data-bs-toggle="collapse" i18n:translate="">
+                    Activities declaration
+                  </button>
+                </h2>
+                <div class="accordion-collapse collapse" id="collapseFour" data-bs-parent="#councillor-accordion">
+                  <div class="accordion-body bg-light">
+                    <div class="alert alert-info d-flex align-items-center"
+                      tal:condition="python: not context.activities_declaration_text and not context.activities_declaration_file"
+                      i18n:translate="">
+                      <span class="fs-4 me-3 d-flex align-items-center"
+                        tal:content="structure python:icons.tag('info-circle')"></span>
+                      There is no related information
+                    </div>
+                    <div id="parent-fieldname-text-activities_declaration_text" tal:define="
+                             toc context/table_of_contents|nothing;
+                           " tal:condition="context/activities_declaration_text"
+                      tal:content="structure python:context.activities_declaration_text.output_relative_to(view.context)"
+                      tal:attributes="
+                             class python: toc and 'pat-autotoc' or '';
+                           ">
+                    </div>
+                    <div class="fitxategia mt-3" tal:condition="nocall:context/activities_declaration_file">
+                      <a class="btn btn-outline-primary d-inline-flex align-items-center gap-2" tal:attributes="
+                             href string:${context/absolute_url}/@@download/activities_declaration_file;
+                           " i18n:translate="">
+                        <span class="fs-5 d-flex align-items-center"
+                          tal:content="structure python:icons.tag('download')"></span>
+                        Download file
+                      </a>
+                    </div>
                   </div>
                 </div>
               </div>
+
             </div>
+
           </div>
-        </main>
-      </metal:block>
-    </metal:content-core>
-  </body>
+        </div>
+      </main>
+
+    </metal:block>
+  </metal:content-core>
+</body>
 
 </html>
