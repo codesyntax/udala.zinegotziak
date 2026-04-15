@@ -1,43 +1,59 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-  xmlns:metal="http://xml.zope.org/namespaces/metal" xmlns:tal="http://xml.zope.org/namespaces/tal"
-  metal:use-macro="context/main_template/macros/master" i18n:domain="udala.zinegotziak">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="udala.zinegotziak"
+>
 
-<body>
+  <body>
 
-  <metal:content-core fill-slot="content-core">
-    <metal:block define-macro="content-core">
+    <metal:content-core fill-slot="content-core">
+      <metal:block define-macro="content-core">
 
-      <div id="parties" class="my-4" tal:define="
+        <div class="my-4"
+             id="parties"
+             tal:define="
                parties_brains python:context.restrictedTraverse('@@contentlisting')(portal_type='Party');
-             " tal:condition="parties_brains">
+             "
+             tal:condition="parties_brains"
+        >
 
-        <div class="row g-4">
-          <div class="col-md-6 col-lg-4" tal:repeat="brain parties_brains">
-            <div class="card h-100 shadow-sm border-0" tal:define="
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4"
+                 tal:repeat="brain parties_brains"
+            >
+              <div class="card h-100 shadow-sm border-0"
+                   tal:define="
                      item python:brain.getObject();
                      images item/@@images;
-                   ">
-              <div class="card-img-top p-4 p-lg-5 d-flex align-items-center justify-content-center bg-light">
-                <tal:img condition="python:item.image">
-                  <img class="img-fluid object-fit-contain"
-                    tal:replace="structure python:images.srcset('image', scale_in_src='large', sizes='(min-width: 1400px) 200px, 90vw', alt=item.title, title=item.title, loading='lazy', css_class='img-fluid object-fit-contain')" />
-                </tal:img>
-              </div>
+                   "
+              >
+                <div class="card-img-top p-4 p-lg-5 d-flex align-items-center justify-content-center bg-light">
+                  <tal:img condition="python:item.image">
+                    <img class="img-fluid object-fit-contain"
+                         tal:replace="structure python:images.srcset('image', scale_in_src='large', sizes='(min-width: 1400px) 200px, 90vw', alt=item.title, title=item.title, loading='lazy', css_class='img-fluid object-fit-contain')"
+                    />
+                  </tal:img>
+                </div>
 
-              <div class="card-body text-center bg-white border-top">
-                <h3 class="card-title mb-0">
-                  <a class="text-dark text-decoration-none stretched-link" tal:content="item/title" tal:attributes="
+                <div class="card-body text-center bg-white border-top">
+                  <h3 class="card-title mb-0">
+                    <a class="text-dark text-decoration-none stretched-link"
+                       tal:content="item/title"
+                       tal:attributes="
                          href item/absolute_url;
-                       "></a>
-                </h3>
+                       "
+                    ></a>
+                  </h3>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-      </div>
-    </metal:block>
-  </metal:content-core>
-</body>
+        </div>
+      </metal:block>
+    </metal:content-core>
+  </body>
 
 </html>

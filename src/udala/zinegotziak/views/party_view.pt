@@ -1,70 +1,97 @@
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:i18n="http://xml.zope.org/namespaces/i18n"
-  xmlns:metal="http://xml.zope.org/namespaces/metal" xmlns:tal="http://xml.zope.org/namespaces/tal"
-  metal:use-macro="context/main_template/macros/master" i18n:domain="udala.zinegotziak">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:i18n="http://xml.zope.org/namespaces/i18n"
+      xmlns:metal="http://xml.zope.org/namespaces/metal"
+      xmlns:tal="http://xml.zope.org/namespaces/tal"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="udala.zinegotziak"
+>
 
-<body>
+  <body>
 
-  <metal:content-core fill-slot="main">
-    <metal:block define-macro="content-core">
+    <metal:content-core fill-slot="main">
+      <metal:block define-macro="content-core">
 
-      <h1 tal:replace="structure context/@@title"></h1>
+        <h1 tal:replace="structure context/@@title"></h1>
 
-      <div id="parent-fieldname-text-party" class="mb-5" tal:define="
+        <div class="mb-5"
+             id="parent-fieldname-text-party"
+             tal:define="
                toc context/table_of_contents|nothing;
-             " tal:condition="context/text"
-        tal:content="structure python:context.text.output_relative_to(view.context)" tal:attributes="
+             "
+             tal:condition="context/text"
+             tal:content="structure python:context.text.output_relative_to(view.context)"
+             tal:attributes="
                class python: toc and 'pat-autotoc mb-5' or 'mb-5';
-             ">
-      </div>
+             "
+        >
+        </div>
 
-      <div class="d-flex align-items-center justify-content-between border-bottom pb-2 mb-4">
-        <h2 class="m-0" i18n:translate="">Members</h2>
+        <div class="d-flex align-items-center justify-content-between border-bottom pb-2 mb-4">
+          <h2 class="m-0"
+              i18n:translate=""
+          >Members</h2>
 
-        <div class="flex-shrink-0 text-center col-4 col-md-2" tal:define="scale_func context/@@images;">
-          <img class="img-fluid object-fit-contain" tal:condition="nocall:context/image" tal:replace="structure python:scale_func.srcset(
+          <div class="flex-shrink-0 text-center col-4 col-md-2"
+               tal:define="
+                 scale_func context/@@images;
+               "
+          >
+            <img class="img-fluid object-fit-contain"
+                 tal:condition="nocall:context/image"
+                 tal:replace="structure python:scale_func.srcset(
                   fieldname='image',
                   sizes='(max-width: 500px) 100px, 150px',
                   css_class='img-fluid object-fit-contain',
                   alt=context.title,
                   scale_in_src='thumb',
-                  title=context.title)" />
+                  title=context.title)"
+            />
+          </div>
         </div>
-      </div>
 
-      <div class="row g-4">
-        <div class="col-sm-6 col-md-4 col-lg-3" tal:repeat="councillor context/get_councillors">
-          <div class="card h-100 border-0 shadow-sm text-center">
-            <a class="d-block pt-4 px-4 text-decoration-none" tal:define="
+        <div class="row g-4">
+          <div class="col-sm-6 col-md-4 col-lg-3"
+               tal:repeat="councillor context/get_councillors"
+          >
+            <div class="card h-100 border-0 shadow-sm text-center">
+              <a class="d-block pt-4 px-4 text-decoration-none"
+                 tal:define="
                    scale nocall:councillor/@@images;
-                 " tal:attributes="
+                 "
+                 tal:attributes="
                    href councillor/absolute_url;
-                 ">
-              <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-75 mx-auto shadow-sm transition-transform">
-                <img class="object-fit-cover w-100 h-100"
-                  sizes="(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw"
-                  tal:condition="nocall:councillor/image" tal:replace="structure python:scale.srcset(
+                 "
+              >
+                <div class="ratio ratio-1x1 rounded-circle overflow-hidden w-75 mx-auto shadow-sm transition-transform">
+                  <img class="object-fit-cover w-100 h-100"
+                       sizes="(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw"
+                       tal:condition="nocall:councillor/image"
+                       tal:replace="structure python:scale.srcset(
                                 fieldname='image',
                                 sizes='(min-width: 1200px) 900px,(min-width: 992px) 768px,100vw',
                                 css_class='object-fit-cover w-100 h-100',
                                 alt=councillor.title,
-                                title=councillor.title)" />
-              </div>
-            </a>
+                                title=councillor.title)"
+                  />
+                </div>
+              </a>
 
-            <div class="card-body">
-              <h6 class="card-title mb-0">
-                <a class="text-dark text-decoration-none fw-bold stretched-link" tal:content="councillor/title"
-                  tal:attributes="
+              <div class="card-body">
+                <h6 class="card-title mb-0">
+                  <a class="text-dark text-decoration-none fw-bold stretched-link"
+                     tal:content="councillor/title"
+                     tal:attributes="
                        href councillor/absolute_url;
-                     "></a>
-              </h6>
+                     "
+                  ></a>
+                </h6>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-    </metal:block>
-  </metal:content-core>
-</body>
+      </metal:block>
+    </metal:content-core>
+  </body>
 
 </html>
