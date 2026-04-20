@@ -16,9 +16,13 @@ class Layer(PloneSandboxLayer):
         # Load any other ZCML that is required for your tests.
         # The z3c.autoinclude feature is disabled in the Plone fixture base
         # layer.
+        import plone.app.z3cform
+        self.loadZCML(package=plone.app.z3cform)
+        import collective.z3cform.datagridfield
         import plone.restapi
 
         self.loadZCML(package=plone.restapi)
+        self.loadZCML(package=collective.z3cform.datagridfield)
         self.loadZCML(package=udala.zinegotziak)
 
     def setUpPloneSite(self, portal):
