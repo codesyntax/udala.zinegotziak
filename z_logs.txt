@@ -1,0 +1,56 @@
+config	Set up job	﻿2026-04-20T12:27:20.4364031Z Current runner version: '2.333.1'
+config	Set up job	2026-04-20T12:27:20.4395466Z ##[group]Runner Image Provisioner
+config	Set up job	2026-04-20T12:27:20.4396908Z Hosted Compute Agent
+config	Set up job	2026-04-20T12:27:20.4397611Z Version: 20260213.493
+config	Set up job	2026-04-20T12:27:20.4398192Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+config	Set up job	2026-04-20T12:27:20.4398981Z Build Date: 2026-02-13T00:28:41Z
+config	Set up job	2026-04-20T12:27:20.4399713Z Worker ID: {e63d3e88-68dd-4714-ad26-dbea17de2b41}
+config	Set up job	2026-04-20T12:27:20.4400403Z Azure Region: centralus
+config	Set up job	2026-04-20T12:27:20.4401002Z ##[endgroup]
+config	Set up job	2026-04-20T12:27:20.4402485Z ##[group]Operating System
+config	Set up job	2026-04-20T12:27:20.4403131Z Ubuntu
+config	Set up job	2026-04-20T12:27:20.4403567Z 24.04.4
+config	Set up job	2026-04-20T12:27:20.4404169Z LTS
+config	Set up job	2026-04-20T12:27:20.4404606Z ##[endgroup]
+config	Set up job	2026-04-20T12:27:20.4405087Z ##[group]Runner Image
+config	Set up job	2026-04-20T12:27:20.4405704Z Image: ubuntu-24.04
+config	Set up job	2026-04-20T12:27:20.4406656Z Version: 20260413.86.1
+config	Set up job	2026-04-20T12:27:20.4407764Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+config	Set up job	2026-04-20T12:27:20.4409647Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+config	Set up job	2026-04-20T12:27:20.4410598Z ##[endgroup]
+config	Set up job	2026-04-20T12:27:20.4413465Z ##[group]GITHUB_TOKEN Permissions
+config	Set up job	2026-04-20T12:27:20.4416175Z Actions: write
+config	Set up job	2026-04-20T12:27:20.4416929Z ArtifactMetadata: write
+config	Set up job	2026-04-20T12:27:20.4417507Z Attestations: write
+config	Set up job	2026-04-20T12:27:20.4417998Z Checks: write
+config	Set up job	2026-04-20T12:27:20.4418553Z Contents: write
+config	Set up job	2026-04-20T12:27:20.4419049Z Deployments: write
+config	Set up job	2026-04-20T12:27:20.4419575Z Discussions: write
+config	Set up job	2026-04-20T12:27:20.4420111Z Issues: write
+config	Set up job	2026-04-20T12:27:20.4420632Z Metadata: read
+config	Set up job	2026-04-20T12:27:20.4421120Z Models: read
+config	Set up job	2026-04-20T12:27:20.4421643Z Packages: write
+config	Set up job	2026-04-20T12:27:20.4422140Z Pages: write
+config	Set up job	2026-04-20T12:27:20.4422833Z PullRequests: write
+config	Set up job	2026-04-20T12:27:20.4423469Z RepositoryProjects: write
+config	Set up job	2026-04-20T12:27:20.4424029Z SecurityEvents: write
+config	Set up job	2026-04-20T12:27:20.4424574Z Statuses: write
+config	Set up job	2026-04-20T12:27:20.4425026Z ##[endgroup]
+config	Set up job	2026-04-20T12:27:20.4428036Z Secret source: Actions
+config	Set up job	2026-04-20T12:27:20.4429019Z Prepare workflow directory
+config	Set up job	2026-04-20T12:27:20.4839244Z Prepare all required actions
+config	Set up job	2026-04-20T12:27:20.4894360Z Complete job name: config
+config	Test vars	﻿2026-04-20T12:27:20.5677633Z ##[group]Run echo 'python-version=3.12'
+config	Test vars	2026-04-20T12:27:20.5678471Z [36;1mecho 'python-version=3.12'[0m
+config	Test vars	2026-04-20T12:27:20.5679108Z [36;1mecho 'plone-version=6.1.2'[0m
+config	Test vars	2026-04-20T12:27:20.5942365Z shell: /usr/bin/bash -e {0}
+config	Test vars	2026-04-20T12:27:20.5943341Z env:
+config	Test vars	2026-04-20T12:27:20.5943981Z   python-version: 3.12
+config	Test vars	2026-04-20T12:27:20.5944534Z   plone-version: 6.1.2
+config	Test vars	2026-04-20T12:27:20.5945030Z ##[endgroup]
+config	Test vars	2026-04-20T12:27:20.6140658Z python-version=3.12
+config	Test vars	2026-04-20T12:27:20.6141719Z plone-version=6.1.2
+config	Complete job	﻿2026-04-20T12:27:20.6297830Z Evaluate and set job outputs
+config	Complete job	2026-04-20T12:27:20.6310713Z Set output 'python-version'
+config	Complete job	2026-04-20T12:27:20.6314395Z Set output 'plone-version'
+config	Complete job	2026-04-20T12:27:20.6316565Z Cleaning up orphan processes

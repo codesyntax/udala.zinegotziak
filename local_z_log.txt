@@ -1,0 +1,1529 @@
+﻿2026-04-20T12:27:27.1174931Z Current runner version: '2.333.1'
+2026-04-20T12:27:27.1215758Z ##[group]Runner Image Provisioner
+2026-04-20T12:27:27.1217089Z Hosted Compute Agent
+2026-04-20T12:27:27.1217955Z Version: 20260213.493
+2026-04-20T12:27:27.1219458Z Commit: 5c115507f6dd24b8de37d8bbe0bb4509d0cc0fa3
+2026-04-20T12:27:27.1220657Z Build Date: 2026-02-13T00:28:41Z
+2026-04-20T12:27:27.1221781Z Worker ID: {9cb2836d-034e-44a5-91f6-2d0aae8f94bb}
+2026-04-20T12:27:27.1223202Z Azure Region: eastus
+2026-04-20T12:27:27.1224059Z ##[endgroup]
+2026-04-20T12:27:27.1226579Z ##[group]Operating System
+2026-04-20T12:27:27.1227603Z Ubuntu
+2026-04-20T12:27:27.1228472Z 24.04.4
+2026-04-20T12:27:27.1229678Z LTS
+2026-04-20T12:27:27.1230625Z ##[endgroup]
+2026-04-20T12:27:27.1231463Z ##[group]Runner Image
+2026-04-20T12:27:27.1232577Z Image: ubuntu-24.04
+2026-04-20T12:27:27.1233532Z Version: 20260413.86.1
+2026-04-20T12:27:27.1235625Z Included Software: https://github.com/actions/runner-images/blob/ubuntu24/20260413.86/images/ubuntu/Ubuntu2404-Readme.md
+2026-04-20T12:27:27.1238325Z Image Release: https://github.com/actions/runner-images/releases/tag/ubuntu24%2F20260413.86
+2026-04-20T12:27:27.1240839Z ##[endgroup]
+2026-04-20T12:27:27.1245660Z ##[group]GITHUB_TOKEN Permissions
+2026-04-20T12:27:27.1249415Z Actions: write
+2026-04-20T12:27:27.1250406Z ArtifactMetadata: write
+2026-04-20T12:27:27.1251382Z Attestations: write
+2026-04-20T12:27:27.1252390Z Checks: write
+2026-04-20T12:27:27.1253236Z Contents: write
+2026-04-20T12:27:27.1254119Z Deployments: write
+2026-04-20T12:27:27.1255152Z Discussions: write
+2026-04-20T12:27:27.1256054Z Issues: write
+2026-04-20T12:27:27.1256914Z Metadata: read
+2026-04-20T12:27:27.1257941Z Models: read
+2026-04-20T12:27:27.1259070Z Packages: write
+2026-04-20T12:27:27.1260012Z Pages: write
+2026-04-20T12:27:27.1261075Z PullRequests: write
+2026-04-20T12:27:27.1262000Z RepositoryProjects: write
+2026-04-20T12:27:27.1263048Z SecurityEvents: write
+2026-04-20T12:27:27.1264110Z Statuses: write
+2026-04-20T12:27:27.1265040Z ##[endgroup]
+2026-04-20T12:27:27.1268206Z Secret source: Actions
+2026-04-20T12:27:27.1270103Z Prepare workflow directory
+2026-04-20T12:27:27.2096442Z Prepare all required actions
+2026-04-20T12:27:27.2155996Z Getting action download info
+2026-04-20T12:27:27.4969910Z Download action repository 'actions/checkout@v6' (SHA:de0fac2e4500dabe0009e67214ff5f5447ce83dd)
+2026-04-20T12:27:27.6453958Z Download action repository 'plone/meta@2.x' (SHA:962395a04ad8bec8b6d9f3df7b3ba35c6e228dd6)
+2026-04-20T12:27:28.0092013Z Getting action download info
+2026-04-20T12:27:28.1965248Z Download action repository 'astral-sh/setup-uv@v5' (SHA:d4b2f3b6ecc6e67c4457f6d3e41ec42d3d0fcb86)
+2026-04-20T12:27:28.4981528Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2026-04-20T12:27:28.6334526Z Uses: plone/meta/.github/workflows/backend-pytest.yml@refs/heads/2.x (962395a04ad8bec8b6d9f3df7b3ba35c6e228dd6)
+2026-04-20T12:27:28.6340930Z ##[group] Inputs
+2026-04-20T12:27:28.6341897Z   python-version: 3.12
+2026-04-20T12:27:28.6342804Z   plone-version: 6.0-latest
+2026-04-20T12:27:28.6343732Z   working-directory: .
+2026-04-20T12:27:28.6344557Z ##[endgroup]
+2026-04-20T12:27:28.6345663Z Complete job name: Backend: Test (3.12, 6.0-latest) / Tests with Pytest
+2026-04-20T12:27:28.7116665Z ##[group]Run actions/checkout@v6
+2026-04-20T12:27:28.7117951Z with:
+2026-04-20T12:27:28.7119155Z   repository: codesyntax/udala.zinegotziak
+2026-04-20T12:27:28.7120535Z   token: ***
+2026-04-20T12:27:28.7121264Z   ssh-strict: true
+2026-04-20T12:27:28.7122009Z   ssh-user: git
+2026-04-20T12:27:28.7122795Z   persist-credentials: true
+2026-04-20T12:27:28.7123665Z   clean: true
+2026-04-20T12:27:28.7124450Z   sparse-checkout-cone-mode: true
+2026-04-20T12:27:28.7125404Z   fetch-depth: 1
+2026-04-20T12:27:28.7126174Z   fetch-tags: false
+2026-04-20T12:27:28.7126965Z   show-progress: true
+2026-04-20T12:27:28.7127747Z   lfs: false
+2026-04-20T12:27:28.7128479Z   submodules: false
+2026-04-20T12:27:28.7129611Z   set-safe-directory: true
+2026-04-20T12:27:28.7130826Z env:
+2026-04-20T12:27:28.7131868Z   PYTHON_VERSION: 3.12
+2026-04-20T12:27:28.7132718Z   PLONE_VERSION: 6.0-latest
+2026-04-20T12:27:28.7133590Z ##[endgroup]
+2026-04-20T12:27:28.8124789Z Syncing repository: codesyntax/udala.zinegotziak
+2026-04-20T12:27:28.8129468Z ##[group]Getting Git version info
+2026-04-20T12:27:28.8131944Z Working directory is '/home/runner/work/udala.zinegotziak/udala.zinegotziak'
+2026-04-20T12:27:28.8134449Z [command]/usr/bin/git version
+2026-04-20T12:27:28.8154677Z git version 2.53.0
+2026-04-20T12:27:28.8180479Z ##[endgroup]
+2026-04-20T12:27:28.8197625Z Temporarily overriding HOME='/home/runner/work/_temp/2ac62b73-ced0-4b9b-ba7d-c29cbd0676ff' before making global git config changes
+2026-04-20T12:27:28.8202509Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-20T12:27:28.8206681Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/udala.zinegotziak/udala.zinegotziak
+2026-04-20T12:27:28.8241176Z Deleting the contents of '/home/runner/work/udala.zinegotziak/udala.zinegotziak'
+2026-04-20T12:27:28.8245390Z ##[group]Initializing the repository
+2026-04-20T12:27:28.8251437Z [command]/usr/bin/git init /home/runner/work/udala.zinegotziak/udala.zinegotziak
+2026-04-20T12:27:28.8360558Z hint: Using 'master' as the name for the initial branch. This default branch name
+2026-04-20T12:27:28.8363929Z hint: will change to "main" in Git 3.0. To configure the initial branch name
+2026-04-20T12:27:28.8367098Z hint: to use in all of your new repositories, which will suppress this warning,
+2026-04-20T12:27:28.8369817Z hint: call:
+2026-04-20T12:27:28.8370952Z hint:
+2026-04-20T12:27:28.8372541Z hint: 	git config --global init.defaultBranch <name>
+2026-04-20T12:27:28.8374510Z hint:
+2026-04-20T12:27:28.8376295Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2026-04-20T12:27:28.8379490Z hint: 'development'. The just-created branch can be renamed via this command:
+2026-04-20T12:27:28.8381824Z hint:
+2026-04-20T12:27:28.8382596Z hint: 	git branch -m <name>
+2026-04-20T12:27:28.8383486Z hint:
+2026-04-20T12:27:28.8384639Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2026-04-20T12:27:28.8386930Z Initialized empty Git repository in /home/runner/work/udala.zinegotziak/udala.zinegotziak/.git/
+2026-04-20T12:27:28.8391919Z [command]/usr/bin/git remote add origin https://github.com/codesyntax/udala.zinegotziak
+2026-04-20T12:27:28.8409188Z ##[endgroup]
+2026-04-20T12:27:28.8411546Z ##[group]Disabling automatic garbage collection
+2026-04-20T12:27:28.8413706Z [command]/usr/bin/git config --local gc.auto 0
+2026-04-20T12:27:28.8444829Z ##[endgroup]
+2026-04-20T12:27:28.8447041Z ##[group]Setting up auth
+2026-04-20T12:27:28.8448964Z Removing SSH command configuration
+2026-04-20T12:27:28.8453196Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-20T12:27:28.8488517Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-20T12:27:28.8789049Z Removing HTTP extra header
+2026-04-20T12:27:28.8797029Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-20T12:27:28.8833585Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-20T12:27:28.9056322Z Removing includeIf entries pointing to credentials config files
+2026-04-20T12:27:28.9063967Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-20T12:27:28.9100090Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-20T12:27:28.9330738Z [command]/usr/bin/git config --file /home/runner/work/_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2026-04-20T12:27:28.9369419Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/udala.zinegotziak/udala.zinegotziak/.git.path /home/runner/work/_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:28.9401154Z [command]/usr/bin/git config --local includeIf.gitdir:/home/runner/work/udala.zinegotziak/udala.zinegotziak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:28.9432998Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:28.9465069Z [command]/usr/bin/git config --local includeIf.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:28.9493010Z ##[endgroup]
+2026-04-20T12:27:28.9494336Z ##[group]Fetching the repository
+2026-04-20T12:27:28.9503098Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +c9a55f668971fdb712ad4b213aa1e868c27ccaf3:refs/remotes/origin/update-structure
+2026-04-20T12:27:29.1277080Z From https://github.com/codesyntax/udala.zinegotziak
+2026-04-20T12:27:29.1281082Z  * [new ref]         c9a55f668971fdb712ad4b213aa1e868c27ccaf3 -> origin/update-structure
+2026-04-20T12:27:29.1316284Z [command]/usr/bin/git branch --list --remote origin/update-structure
+2026-04-20T12:27:29.1344745Z   origin/update-structure
+2026-04-20T12:27:29.1355587Z [command]/usr/bin/git rev-parse refs/remotes/origin/update-structure
+2026-04-20T12:27:29.1383080Z c9a55f668971fdb712ad4b213aa1e868c27ccaf3
+2026-04-20T12:27:29.1389527Z ##[endgroup]
+2026-04-20T12:27:29.1392211Z ##[group]Determining the checkout info
+2026-04-20T12:27:29.1395224Z ##[endgroup]
+2026-04-20T12:27:29.1396785Z [command]/usr/bin/git sparse-checkout disable
+2026-04-20T12:27:29.1440022Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2026-04-20T12:27:29.1476011Z ##[group]Checking out the ref
+2026-04-20T12:27:29.1482304Z [command]/usr/bin/git checkout --progress --force -B update-structure refs/remotes/origin/update-structure
+2026-04-20T12:27:29.1576708Z Switched to a new branch 'update-structure'
+2026-04-20T12:27:29.1579508Z branch 'update-structure' set up to track 'origin/update-structure'.
+2026-04-20T12:27:29.1586493Z ##[endgroup]
+2026-04-20T12:27:29.1627073Z [command]/usr/bin/git log -1 --format=%H
+2026-04-20T12:27:29.1667665Z c9a55f668971fdb712ad4b213aa1e868c27ccaf3
+2026-04-20T12:27:29.2136421Z ##[group]Run plone/meta/.github/actions/setup_backend_uv@2.x
+2026-04-20T12:27:29.2138528Z with:
+2026-04-20T12:27:29.2140023Z   python-version: 3.12
+2026-04-20T12:27:29.2141457Z   plone-version: 6.0-latest
+2026-04-20T12:27:29.2142960Z   working-directory: .
+2026-04-20T12:27:29.2144305Z env:
+2026-04-20T12:27:29.2145464Z   PYTHON_VERSION: 3.12
+2026-04-20T12:27:29.2146922Z   PLONE_VERSION: 6.0-latest
+2026-04-20T12:27:29.2148413Z ##[endgroup]
+2026-04-20T12:27:29.2370695Z ##[group]Run astral-sh/setup-uv@v5
+2026-04-20T12:27:29.2371661Z with:
+2026-04-20T12:27:29.2372361Z   python-version: 3.12
+2026-04-20T12:27:29.2373161Z   enable-cache: false
+2026-04-20T12:27:29.2374286Z   github-token: ***
+2026-04-20T12:27:29.2375268Z   cache-dependency-glob: **/uv.lock
+**/requirements*.txt
+
+2026-04-20T12:27:29.2376409Z   prune-cache: true
+2026-04-20T12:27:29.2377214Z   ignore-nothing-to-cache: false
+2026-04-20T12:27:29.2378144Z   ignore-empty-workdir: false
+2026-04-20T12:27:29.2379196Z env:
+2026-04-20T12:27:29.2379923Z   PYTHON_VERSION: 3.12
+2026-04-20T12:27:29.2380726Z   PLONE_VERSION: 6.0-latest
+2026-04-20T12:27:29.2381545Z ##[endgroup]
+2026-04-20T12:27:29.7243831Z Downloading uv from "https://github.com/astral-sh/uv/releases/download/0.11.7/uv-x86_64-unknown-linux-gnu.tar.gz" ...
+2026-04-20T12:27:30.0418074Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/ad4b5d97-9551-490b-a965-506d50f06c59 -f /home/runner/work/_temp/656451b5-e3ba-43ee-8ebd-f11addac0242
+2026-04-20T12:27:30.5118142Z Added /home/runner/.local/bin to the path
+2026-04-20T12:27:30.5122502Z Added /opt/hostedtoolcache/uv/0.11.7/x86_64 to the path
+2026-04-20T12:27:30.5125033Z Set UV_PYTHON to 3.12
+2026-04-20T12:27:30.5125795Z Activating python venv...
+2026-04-20T12:27:30.6082201Z Set UV_CACHE_DIR to /home/runner/work/_temp/setup-uv-cache
+2026-04-20T12:27:30.6083040Z Successfully installed uv version 0.11.7
+2026-04-20T12:27:30.8782486Z ##[group]Run actions/cache@v4
+2026-04-20T12:27:30.8782990Z with:
+2026-04-20T12:27:30.8783429Z   path: /home/runner/work/_temp/setup-uv-cache
+2026-04-20T12:27:30.8784393Z   key: uv-Linux-3.12-6.0-latest-9337c509b73895d3c91cfba63e9de595b38c5932bd493ca6a3ae830c65b8cbc4-
+2026-04-20T12:27:30.8786644Z   restore-keys: uv-Linux-3.12-6.0-latest-9337c509b73895d3c91cfba63e9de595b38c5932bd493ca6a3ae830c65b8cbc4-
+uv-Linux-3.12-6.0-latest-9337c509b73895d3c91cfba63e9de595b38c5932bd493ca6a3ae830c65b8cbc4
+uv-Linux-3.12-6.0-latest
+
+2026-04-20T12:27:30.8788866Z   enableCrossOsArchive: false
+2026-04-20T12:27:30.8789407Z   fail-on-cache-miss: false
+2026-04-20T12:27:30.8789885Z   lookup-only: false
+2026-04-20T12:27:30.8790303Z   save-always: false
+2026-04-20T12:27:30.8790715Z env:
+2026-04-20T12:27:30.8791080Z   PYTHON_VERSION: 3.12
+2026-04-20T12:27:30.8791516Z   PLONE_VERSION: 6.0-latest
+2026-04-20T12:27:30.8791961Z   UV_PYTHON: 3.12
+2026-04-20T12:27:30.8792571Z   VIRTUAL_ENV: /home/runner/work/udala.zinegotziak/udala.zinegotziak/.venv
+2026-04-20T12:27:30.8793422Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-04-20T12:27:30.8794100Z ##[endgroup]
+2026-04-20T12:27:31.0914061Z Cache not found for input keys: uv-Linux-3.12-6.0-latest-9337c509b73895d3c91cfba63e9de595b38c5932bd493ca6a3ae830c65b8cbc4-, uv-Linux-3.12-6.0-latest-9337c509b73895d3c91cfba63e9de595b38c5932bd493ca6a3ae830c65b8cbc4-, uv-Linux-3.12-6.0-latest-9337c509b73895d3c91cfba63e9de595b38c5932bd493ca6a3ae830c65b8cbc4, uv-Linux-3.12-6.0-latest
+2026-04-20T12:27:31.1010444Z ##[group]Run make install
+2026-04-20T12:27:31.1010815Z [36;1mmake install[0m
+2026-04-20T12:27:31.1037131Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-04-20T12:27:31.1037521Z env:
+2026-04-20T12:27:31.1037746Z   PYTHON_VERSION: 3.12
+2026-04-20T12:27:31.1037995Z   PLONE_VERSION: 6.0-latest
+2026-04-20T12:27:31.1038255Z   UV_PYTHON: 3.12
+2026-04-20T12:27:31.1039006Z   VIRTUAL_ENV: /home/runner/work/udala.zinegotziak/udala.zinegotziak/.venv
+2026-04-20T12:27:31.1039492Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-04-20T12:27:31.1040083Z ##[endgroup]
+2026-04-20T12:27:31.1142058Z + which uv
+2026-04-20T12:27:31.1166513Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1187273Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1207191Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1227152Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1247021Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1267739Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1287884Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1308536Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1328452Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1348327Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1368969Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1390171Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.1412572Z ++ tput setaf 2
+2026-04-20T12:27:31.1427789Z tput: No value for $TERM and no -T specified
+2026-04-20T12:27:31.1431888Z ++ tput sgr0
+2026-04-20T12:27:31.1438343Z tput: No value for $TERM and no -T specified
+2026-04-20T12:27:31.1440233Z + echo '==> Generate constraints file'
+2026-04-20T12:27:31.1440859Z ==> Generate constraints file
+2026-04-20T12:27:31.1441695Z + echo '-c https://dist.plone.org/release/6.0-latest/constraints.txt'
+2026-04-20T12:27:31.1442602Z + uvx mxdev -c mx.ini
+2026-04-20T12:27:31.4446279Z Installed 2 packages in 3ms
+2026-04-20T12:27:31.6209117Z ###############################################################################
+2026-04-20T12:27:31.6217835Z # Load configuration
+2026-04-20T12:27:31.6227760Z ###############################################################################
+2026-04-20T12:27:31.6228453Z # Read infiles
+2026-04-20T12:27:31.6229440Z Read [r]: requirements.txt
+2026-04-20T12:27:31.6230195Z Read [c]: https://dist.plone.org/release/6.0-latest/constraints.txt
+2026-04-20T12:27:31.9454254Z ###############################################################################
+2026-04-20T12:27:31.9454973Z # No sources configured!
+2026-04-20T12:27:31.9455633Z ###############################################################################
+2026-04-20T12:27:31.9456167Z # Write outfiles
+2026-04-20T12:27:31.9456589Z Write [c]: constraints-mxdev.txt
+2026-04-20T12:27:31.9457023Z Write [r]: requirements-mxdev.txt
+2026-04-20T12:27:31.9457999Z 🎂 You are now ready for: pip install -r requirements-mxdev.txt
+2026-04-20T12:27:31.9458957Z    (path to pip may vary dependent on your installation method)
+2026-04-20T12:27:31.9650679Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.9670774Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.9691007Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.9711179Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:31.9733495Z ++ tput setaf 2
+2026-04-20T12:27:31.9740206Z tput: No value for $TERM and no -T specified
+2026-04-20T12:27:31.9743774Z ++ tput sgr0
+2026-04-20T12:27:31.9750187Z tput: No value for $TERM and no -T specified
+2026-04-20T12:27:31.9752169Z + echo '==> Install environment'
+2026-04-20T12:27:31.9752627Z ==> Install environment
+2026-04-20T12:27:31.9753213Z + [[ -d /home/runner/work/udala.zinegotziak/udala.zinegotziak/.venv ]]
+2026-04-20T12:27:31.9755521Z ++ tput setaf 3
+2026-04-20T12:27:31.9762446Z tput: No value for $TERM and no -T specified
+2026-04-20T12:27:31.9766175Z ++ tput sgr0
+2026-04-20T12:27:31.9772717Z tput: No value for $TERM and no -T specified
+2026-04-20T12:27:31.9775425Z + echo '==> Environment already exists at /home/runner/work/udala.zinegotziak/udala.zinegotziak/.venv'
+2026-04-20T12:27:31.9776198Z ==> Environment already exists at /home/runner/work/udala.zinegotziak/udala.zinegotziak/.venv
+2026-04-20T12:27:31.9776748Z + uv pip install -r requirements-mxdev.txt
+2026-04-20T12:27:33.4956748Z Resolved 284 packages in 1.51s
+2026-04-20T12:27:33.5034291Z    Building udala-zinegotziak @ file:///home/runner/work/udala.zinegotziak/udala.zinegotziak
+2026-04-20T12:27:33.5219053Z Downloading plone-staticresources (13.2MiB)
+2026-04-20T12:27:33.5221484Z Downloading plone-restapi (2.9MiB)
+2026-04-20T12:27:33.5231271Z Downloading plonetheme-barceloneta (7.7MiB)
+2026-04-20T12:27:33.5234264Z Downloading zope (3.1MiB)
+2026-04-20T12:27:33.5238073Z Downloading grpcio-tools (2.3MiB)
+2026-04-20T12:27:33.5240516Z Downloading pillow (4.2MiB)
+2026-04-20T12:27:33.5242677Z Downloading babel (9.1MiB)
+2026-04-20T12:27:33.5246745Z Downloading zope-app-locales (1.1MiB)
+2026-04-20T12:27:33.5249421Z Downloading lxml (4.7MiB)
+2026-04-20T12:27:33.5251992Z Downloading setuptools (1.2MiB)
+2026-04-20T12:27:33.5254475Z Downloading grpcio (5.6MiB)
+2026-04-20T12:27:33.5259351Z Downloading pygments (1.2MiB)
+2026-04-20T12:27:33.5264110Z Downloading selenium (6.2MiB)
+2026-04-20T12:27:33.5573937Z Downloading plone-scale (2.1MiB)
+2026-04-20T12:27:33.5644354Z Downloading plone-app-locales (11.4MiB)
+2026-04-20T12:27:33.5700963Z Downloading btrees (4.0MiB)
+2026-04-20T12:27:33.6755040Z       Built udala-zinegotziak @ file:///home/runner/work/udala.zinegotziak/udala.zinegotziak
+2026-04-20T12:27:34.2308549Z  Downloaded zope-app-locales
+2026-04-20T12:27:34.4710029Z  Downloaded plone-scale
+2026-04-20T12:27:34.5613893Z  Downloaded grpcio-tools
+2026-04-20T12:27:34.5698984Z  Downloaded pygments
+2026-04-20T12:27:34.6810171Z    Building sgmllib3k==1.0.0
+2026-04-20T12:27:34.7739035Z  Downloaded setuptools
+2026-04-20T12:27:34.9269208Z       Built sgmllib3k==1.0.0
+2026-04-20T12:27:34.9498775Z  Downloaded btrees
+2026-04-20T12:27:34.9527703Z  Downloaded pillow
+2026-04-20T12:27:34.9831340Z  Downloaded zope
+2026-04-20T12:27:34.9870083Z  Downloaded grpcio
+2026-04-20T12:27:35.0477526Z  Downloaded lxml
+2026-04-20T12:27:35.1038523Z  Downloaded selenium
+2026-04-20T12:27:35.1181569Z  Downloaded plonetheme-barceloneta
+2026-04-20T12:27:35.1475448Z  Downloaded plone-restapi
+2026-04-20T12:27:35.2398153Z  Downloaded plone-app-locales
+2026-04-20T12:27:35.2511885Z  Downloaded babel
+2026-04-20T12:27:35.9585291Z  Downloaded plone-staticresources
+2026-04-20T12:27:35.9588446Z Prepared 283 packages in 2.45s
+2026-04-20T12:27:36.2678338Z Installed 284 packages in 308ms
+2026-04-20T12:27:36.2681569Z  + accesscontrol==7.2
+2026-04-20T12:27:36.2681943Z  + acquisition==6.1
+2026-04-20T12:27:36.2682276Z  + attrs==24.2.0
+2026-04-20T12:27:36.2682591Z  + authencoding==6.0
+2026-04-20T12:27:36.2682914Z  + babel==2.16.0
+2026-04-20T12:27:36.2683236Z  + beautifulsoup4==4.12.3
+2026-04-20T12:27:36.2683603Z  + borg-localrole==3.1.11
+2026-04-20T12:27:36.2683941Z  + btrees==6.1
+2026-04-20T12:27:36.2684274Z  + certifi==2024.12.14
+2026-04-20T12:27:36.2684592Z  + cffi==1.17.1
+2026-04-20T12:27:36.2684880Z  + chameleon==4.4.4
+2026-04-20T12:27:36.2685217Z  + charset-normalizer==3.4.1
+2026-04-20T12:27:36.2685581Z  + click==8.1.7
+2026-04-20T12:27:36.2685902Z  + collective-mockmailhost==3.0.0
+2026-04-20T12:27:36.2686334Z  + collective-monkeypatcher==2.0.0
+2026-04-20T12:27:36.2686840Z  + collective-z3cform-datagridfield==3.0.2
+2026-04-20T12:27:36.2687285Z  + coverage==7.13.5
+2026-04-20T12:27:36.2687598Z  + cssselect==1.2.0
+2026-04-20T12:27:36.2687900Z  + datetime==5.5
+2026-04-20T12:27:36.2688205Z  + decorator==5.1.1
+2026-04-20T12:27:36.2688496Z  + diazo==2.0.3
+2026-04-20T12:27:36.2688986Z  + documenttemplate==4.6
+2026-04-20T12:27:36.2689621Z  + docutils==0.21.2
+2026-04-20T12:27:36.2689973Z  + extensionclass==6.0
+2026-04-20T12:27:36.2690312Z  + feedparser==6.0.11
+2026-04-20T12:27:36.2690663Z  + five-customerize==3.0.0
+2026-04-20T12:27:36.2691018Z  + five-intid==2.0.1
+2026-04-20T12:27:36.2691536Z  + five-localsitemanager==4.0
+2026-04-20T12:27:36.2692382Z  + furl==2.1.3
+2026-04-20T12:27:36.2692688Z  + grpcio==1.70.0
+2026-04-20T12:27:36.2693143Z  + grpcio-tools==1.70.0
+2026-04-20T12:27:36.2693676Z  + gunicorn==23.0.0
+2026-04-20T12:27:36.2694158Z  + h11==0.14.0
+2026-04-20T12:27:36.2694767Z  + horse-with-no-namespace==20260202.0
+2026-04-20T12:27:36.2695238Z  + icalendar==5.0.13
+2026-04-20T12:27:36.2695695Z  + idna==3.10
+2026-04-20T12:27:36.2696383Z  + iniconfig==2.3.0
+2026-04-20T12:27:36.2696815Z  + jsonschema==4.23.0
+2026-04-20T12:27:36.2697421Z  + jsonschema-specifications==2024.10.1
+2026-04-20T12:27:36.2697840Z  + lxml==5.3.0
+2026-04-20T12:27:36.2698147Z  + lxml-html-clean==0.4.1
+2026-04-20T12:27:36.2698500Z  + markdown==3.7
+2026-04-20T12:27:36.2699019Z  + missing==5.0
+2026-04-20T12:27:36.2699315Z  + mock==5.1.0
+2026-04-20T12:27:36.2699615Z  + multimapping==5.0
+2026-04-20T12:27:36.2699968Z  + multipart==1.2.1
+2026-04-20T12:27:36.2700440Z  + natsort==8.4.0
+2026-04-20T12:27:36.2701236Z  + orderedmultidict==1.0.1
+2026-04-20T12:27:36.2701937Z  + outcome==1.3.0.post0
+2026-04-20T12:27:36.2702461Z  + overrides==7.7.0
+2026-04-20T12:27:36.2703041Z  + packaging==24.2
+2026-04-20T12:27:36.2703612Z  + paste==3.10.1
+2026-04-20T12:27:36.2704214Z  + pastedeploy==3.1.0
+2026-04-20T12:27:36.2704681Z  + persistence==5.1
+2026-04-20T12:27:36.2705247Z  + persistent==6.1
+2026-04-20T12:27:36.2705835Z  + piexif==1.1.3
+2026-04-20T12:27:36.2706494Z  + pillow==11.0.0
+2026-04-20T12:27:36.2707091Z  + plone-alterego==2.0.1
+2026-04-20T12:27:36.2707771Z  + plone-api==2.5.0
+2026-04-20T12:27:36.2708352Z  + plone-app-caching==3.1.6
+2026-04-20T12:27:36.2709277Z  + plone-app-content==4.1.9
+2026-04-20T12:27:36.2709734Z  + plone-app-contentlisting==3.0.5
+2026-04-20T12:27:36.2710203Z  + plone-app-contentmenu==3.0.7
+2026-04-20T12:27:36.2710634Z  + plone-app-contentrules==5.0.6
+2026-04-20T12:27:36.2711224Z  + plone-app-contenttypes==3.0.11
+2026-04-20T12:27:36.2711706Z  + plone-app-customerize==2.0.2
+2026-04-20T12:27:36.2712123Z  + plone-app-dexterity==3.2.2
+2026-04-20T12:27:36.2712551Z  + plone-app-discussion==4.1.5
+2026-04-20T12:27:36.2712948Z  + plone-app-event==5.2.1
+2026-04-20T12:27:36.2713301Z  + plone-app-i18n==4.0.1
+2026-04-20T12:27:36.2713675Z  + plone-app-intid==2.0.0
+2026-04-20T12:27:36.2714037Z  + plone-app-iterate==5.0.5
+2026-04-20T12:27:36.2714413Z  + plone-app-layout==4.1.3
+2026-04-20T12:27:36.2714793Z  + plone-app-linkintegrity==4.0.6
+2026-04-20T12:27:36.2715221Z  + plone-app-locales==6.0.30
+2026-04-20T12:27:36.2715635Z  + plone-app-lockingbehavior==2.0.2
+2026-04-20T12:27:36.2716068Z  + plone-app-multilingual==7.0.6
+2026-04-20T12:27:36.2716475Z  + plone-app-portlets==5.0.7
+2026-04-20T12:27:36.2716869Z  + plone-app-querystring==2.1.3
+2026-04-20T12:27:36.2717307Z  + plone-app-redirector==3.0.4
+2026-04-20T12:27:36.2717693Z  + plone-app-registry==2.0.6
+2026-04-20T12:27:36.2718086Z  + plone-app-relationfield==3.0.6
+2026-04-20T12:27:36.2718501Z  + plone-app-robotframework==2.1.5
+2026-04-20T12:27:36.2719103Z  + plone-app-testing==7.1.1
+2026-04-20T12:27:36.2719505Z  + plone-app-textfield==2.0.1
+2026-04-20T12:27:36.2719899Z  + plone-app-theming==5.0.12
+2026-04-20T12:27:36.2720289Z  + plone-app-upgrade==3.2.0
+2026-04-20T12:27:36.2720664Z  + plone-app-users==3.1.1
+2026-04-20T12:27:36.2721025Z  + plone-app-uuid==2.2.3
+2026-04-20T12:27:36.2721416Z  + plone-app-versioningbehavior==2.0.4
+2026-04-20T12:27:36.2721880Z  + plone-app-viewletmanager==4.0.4
+2026-04-20T12:27:36.2722306Z  + plone-app-vocabularies==5.0.5
+2026-04-20T12:27:36.2722728Z  + plone-app-workflow==5.0.4
+2026-04-20T12:27:36.2723112Z  + plone-app-z3cform==4.3.2
+2026-04-20T12:27:36.2723477Z  + plone-autoform==2.0.3
+2026-04-20T12:27:36.2723834Z  + plone-autoinclude==2.0.3
+2026-04-20T12:27:36.2724192Z  + plone-base==1.4.1
+2026-04-20T12:27:36.2724524Z  + plone-batching==2.0.6
+2026-04-20T12:27:36.2724878Z  + plone-behavior==2.0.1
+2026-04-20T12:27:36.2725240Z  + plone-browserlayer==3.0.2
+2026-04-20T12:27:36.2725633Z  + plone-cachepurging==3.0.2
+2026-04-20T12:27:36.2726003Z  + plone-caching==2.0.1
+2026-04-20T12:27:36.2726594Z  + plone-contentrules==3.0.1
+2026-04-20T12:27:36.2726988Z  + plone-dexterity==3.0.7
+2026-04-20T12:27:36.2727352Z  + plone-event==2.0.2
+2026-04-20T12:27:36.2727678Z  + plone-folder==4.0.1
+2026-04-20T12:27:36.2728046Z  + plone-formwidget-namedfile==3.1.1
+2026-04-20T12:27:36.2728503Z  + plone-formwidget-recurrence==3.0.5
+2026-04-20T12:27:36.2729127Z  + plone-i18n==5.1.0
+2026-04-20T12:27:36.2729464Z  + plone-indexer==2.0.1
+2026-04-20T12:27:36.2729837Z  + plone-intelligenttext==4.0.1
+2026-04-20T12:27:36.2730226Z  + plone-keyring==4.0.2
+2026-04-20T12:27:36.2730579Z  + plone-locking==3.0.2
+2026-04-20T12:27:36.2730918Z  + plone-memoize==3.0.3
+2026-04-20T12:27:36.2731261Z  + plone-namedfile==7.0.1
+2026-04-20T12:27:36.2731640Z  + plone-outputfilters==5.0.4
+2026-04-20T12:27:36.2732040Z  + plone-portlet-collection==4.0.4
+2026-04-20T12:27:36.2732469Z  + plone-portlet-static==4.0.4
+2026-04-20T12:27:36.2732851Z  + plone-portlets==3.0.2
+2026-04-20T12:27:36.2733218Z  + plone-protect==5.0.3
+2026-04-20T12:27:36.2733567Z  + plone-registry==2.0.1
+2026-04-20T12:27:36.2733914Z  + plone-resource==3.0.2
+2026-04-20T12:27:36.2734282Z  + plone-resourceeditor==4.0.1
+2026-04-20T12:27:36.2734658Z  + plone-rest==5.0.0
+2026-04-20T12:27:36.2734993Z  + plone-restapi==9.13.3
+2026-04-20T12:27:36.2735333Z  + plone-rfc822==3.0.1
+2026-04-20T12:27:36.2735694Z  + plone-scale==4.1.4
+2026-04-20T12:27:36.2736018Z  + plone-schema==2.0.2
+2026-04-20T12:27:36.2736374Z  + plone-schemaeditor==4.0.11
+2026-04-20T12:27:36.2736940Z  + plone-session==4.0.4
+2026-04-20T12:27:36.2737315Z  + plone-staticresources==2.1.17
+2026-04-20T12:27:36.2737724Z  + plone-stringinterp==2.0.2
+2026-04-20T12:27:36.2738102Z  + plone-subrequest==2.0.5
+2026-04-20T12:27:36.2738472Z  + plone-supermodel==2.0.4
+2026-04-20T12:27:36.2739016Z  + plone-testing==9.0.5
+2026-04-20T12:27:36.2739362Z  + plone-theme==4.0.3
+2026-04-20T12:27:36.2739706Z  + plone-transformchain==3.0.1
+2026-04-20T12:27:36.2740098Z  + plone-uuid==2.0.1
+2026-04-20T12:27:36.2740428Z  + plone-z3cform==2.0.4
+2026-04-20T12:27:36.2740805Z  + plonetheme-barceloneta==3.1.11
+2026-04-20T12:27:36.2741203Z  + pluggy==1.6.0
+2026-04-20T12:27:36.2741531Z  + products-btreefolder2==5.1
+2026-04-20T12:27:36.2741934Z  + products-cmfcore==3.7
+2026-04-20T12:27:36.2742312Z  + products-cmfdifftool==4.0.4
+2026-04-20T12:27:36.2742726Z  + products-cmfdynamicviewfti==7.0.2
+2026-04-20T12:27:36.2743164Z  + products-cmfeditions==4.0.5
+2026-04-20T12:27:36.2743588Z  + products-cmfplacefulworkflow==3.0.5
+2026-04-20T12:27:36.2744038Z  + products-cmfplone==6.0.15
+2026-04-20T12:27:36.2744422Z  + products-cmfuid==4.2
+2026-04-20T12:27:36.2744795Z  + products-daterecurringindex==3.0.1
+2026-04-20T12:27:36.2745246Z  + products-dcworkflow==3.0
+2026-04-20T12:27:36.2745661Z  + products-extendedpathindex==4.0.1
+2026-04-20T12:27:36.2746103Z  + products-externalmethod==6.0
+2026-04-20T12:27:36.2746514Z  + products-genericsetup==5.0.0
+2026-04-20T12:27:36.2746918Z  + products-isurlinportal==2.0.3
+2026-04-20T12:27:36.2747339Z  + products-mailhost==6.0
+2026-04-20T12:27:36.2747734Z  + products-mimetypesregistry==3.0.1
+2026-04-20T12:27:36.2748175Z  + products-plonepas==8.0.5
+2026-04-20T12:27:36.2748744Z  + products-pluggableauthservice==3.0
+2026-04-20T12:27:36.2749217Z  + products-pluginregistry==2.0
+2026-04-20T12:27:36.2749635Z  + products-portaltransforms==4.1.1
+2026-04-20T12:27:36.2750070Z  + products-pythonscripts==5.1
+2026-04-20T12:27:36.2750473Z  + products-sessions==5.0
+2026-04-20T12:27:36.2750846Z  + products-siteerrorlog==6.0
+2026-04-20T12:27:36.2751281Z  + products-standardcachemanagers==5.0
+2026-04-20T12:27:36.2751732Z  + products-statusmessages==5.0.6
+2026-04-20T12:27:36.2752145Z  + products-zcatalog==7.1
+2026-04-20T12:27:36.2752524Z  + products-zopeversioncontrol==4.1
+2026-04-20T12:27:36.2752952Z  + prompt-toolkit==3.0.48
+2026-04-20T12:27:36.2753297Z  + protobuf==5.29.3
+2026-04-20T12:27:36.2753607Z  + pycparser==2.22
+2026-04-20T12:27:36.2753917Z  + pygments==2.19.1
+2026-04-20T12:27:36.2754221Z  + pyjwt==2.8.0
+2026-04-20T12:27:36.2754524Z  + pysocks==1.7.1
+2026-04-20T12:27:36.2754987Z  + pytest==9.0.3
+2026-04-20T12:27:36.2755317Z  + pytest-cov==7.1.0
+2026-04-20T12:27:36.2755646Z  + pytest-plone==1.0.0a3
+2026-04-20T12:27:36.2756029Z  + python-dateutil==2.9.0.post0
+2026-04-20T12:27:36.2756410Z  + python-gettext==5.0
+2026-04-20T12:27:36.2756741Z  + pytz==2024.2
+2026-04-20T12:27:36.2757035Z  + record==4.1
+2026-04-20T12:27:36.2757332Z  + referencing==0.35.1
+2026-04-20T12:27:36.2757682Z  + repoze-xmliter==1.0b1
+2026-04-20T12:27:36.2758036Z  + requests==2.32.3
+2026-04-20T12:27:36.2758359Z  + restrictedpython==8.0
+2026-04-20T12:27:36.2758888Z  + robotframework==6.0.2
+2026-04-20T12:27:36.2759282Z  + robotframework-assertion-engine==3.0.3
+2026-04-20T12:27:36.2759754Z  + robotframework-browser==19.3.1
+2026-04-20T12:27:36.2760188Z  + robotframework-debuglibrary==2.5.0
+2026-04-20T12:27:36.2760642Z  + robotframework-pythonlibcore==4.4.1
+2026-04-20T12:27:36.2761121Z  + robotframework-selenium2library==3.0.0
+2026-04-20T12:27:36.2761600Z  + robotframework-seleniumlibrary==6.1.3
+2026-04-20T12:27:36.2762144Z  + robotframework-seleniumtestability==2.1.0
+2026-04-20T12:27:36.2762598Z  + robotsuite==2.3.2
+2026-04-20T12:27:36.2762921Z  + roman==5.0
+2026-04-20T12:27:36.2763202Z  + rpds-py==0.22.3
+2026-04-20T12:27:36.2763508Z  + seedir==0.5.0
+2026-04-20T12:27:36.2763798Z  + selenium==4.9.1
+2026-04-20T12:27:36.2764112Z  + setuptools==75.8.2
+2026-04-20T12:27:36.2764443Z  + sgmllib3k==1.0.0
+2026-04-20T12:27:36.2764750Z  + simplejson==3.19.3
+2026-04-20T12:27:36.2765287Z  + six==1.17.0
+2026-04-20T12:27:36.2765572Z  + sniffio==1.3.1
+2026-04-20T12:27:36.2765896Z  + sortedcontainers==2.4.0
+2026-04-20T12:27:36.2766250Z  + soupsieve==2.6
+2026-04-20T12:27:36.2766558Z  + transaction==5.0
+2026-04-20T12:27:36.2766857Z  + trio==0.27.0
+2026-04-20T12:27:36.2767167Z  + trio-websocket==0.11.1
+2026-04-20T12:27:36.2767838Z  + udala-zinegotziak==1.0.0a0 (from file:///home/runner/work/udala.zinegotziak/udala.zinegotziak)
+2026-04-20T12:27:36.2768746Z  + unidecode==1.3.8
+2026-04-20T12:27:36.2769068Z  + urllib3==2.3.0
+2026-04-20T12:27:36.2769364Z  + waitress==3.0.2
+2026-04-20T12:27:36.2769681Z  + wcwidth==0.2.13
+2026-04-20T12:27:36.2770043Z  + webob==1.8.9
+2026-04-20T12:27:36.2770343Z  + webresource==1.2
+2026-04-20T12:27:36.2770642Z  + webtest==3.0.3
+2026-04-20T12:27:36.2770943Z  + wrapt==1.17.0
+2026-04-20T12:27:36.2771242Z  + wsgiproxy2==0.5.1
+2026-04-20T12:27:36.2771557Z  + wsproto==1.2.0
+2026-04-20T12:27:36.2771854Z  + z3c-caching==3.0
+2026-04-20T12:27:36.2772146Z  + z3c-form==5.1
+2026-04-20T12:27:36.2772477Z  + z3c-formwidget-query==2.0.0
+2026-04-20T12:27:36.2772850Z  + z3c-objpath==2.0
+2026-04-20T12:27:36.2773158Z  + z3c-pt==4.4
+2026-04-20T12:27:36.2773466Z  + z3c-relationfield==2.0.0
+2026-04-20T12:27:36.2773827Z  + z3c-zcmlhook==2.0
+2026-04-20T12:27:36.2774144Z  + zc-lockfile==3.0.post1
+2026-04-20T12:27:36.2774491Z  + zc-relation==2.1
+2026-04-20T12:27:36.2774784Z  + zconfig==4.2
+2026-04-20T12:27:36.2775076Z  + zexceptions==5.0
+2026-04-20T12:27:36.2775372Z  + zodb==6.0
+2026-04-20T12:27:36.2775665Z  + zodbpickle==4.1.1
+2026-04-20T12:27:36.2775981Z  + zope==5.13
+2026-04-20T12:27:36.2776277Z  + zope-annotation==5.0
+2026-04-20T12:27:36.2776629Z  + zope-app-locales==5.0
+2026-04-20T12:27:36.2776971Z  + zope-browser==3.0
+2026-04-20T12:27:36.2777297Z  + zope-browsermenu==5.0
+2026-04-20T12:27:36.2777647Z  + zope-browserpage==5.0
+2026-04-20T12:27:36.2778012Z  + zope-browserresource==5.1
+2026-04-20T12:27:36.2778410Z  + zope-cachedescriptors==5.0
+2026-04-20T12:27:36.2778965Z  + zope-component==6.0
+2026-04-20T12:27:36.2779342Z  + zope-componentvocabulary==2.3.0
+2026-04-20T12:27:36.2779753Z  + zope-configuration==6.0
+2026-04-20T12:27:36.2780116Z  + zope-container==6.1
+2026-04-20T12:27:36.2780462Z  + zope-contentprovider==6.0
+2026-04-20T12:27:36.2780838Z  + zope-contenttype==5.1
+2026-04-20T12:27:36.2781173Z  + zope-copy==5.0
+2026-04-20T12:27:36.2781485Z  + zope-datetime==5.0.0
+2026-04-20T12:27:36.2781834Z  + zope-deferredimport==5.0
+2026-04-20T12:27:36.2782216Z  + zope-deprecation==5.1
+2026-04-20T12:27:36.2782564Z  + zope-dottedname==6.0
+2026-04-20T12:27:36.2783057Z  + zope-event==5.0
+2026-04-20T12:27:36.2783390Z  + zope-exceptions==5.2
+2026-04-20T12:27:36.2783752Z  + zope-filerepresentation==6.0
+2026-04-20T12:27:36.2784143Z  + zope-globalrequest==2.0
+2026-04-20T12:27:36.2784455Z  + zope-hookable==7.0
+2026-04-20T12:27:36.2811918Z  + zope-i18n==5.2
+2026-04-20T12:27:36.2812320Z  + zope-i18nmessageid==7.0
+2026-04-20T12:27:36.2812676Z  + zope-interface==7.2
+2026-04-20T12:27:36.2812979Z  + zope-intid==5.0
+2026-04-20T12:27:36.2813297Z  + zope-keyreference==6.0
+2026-04-20T12:27:36.2813636Z  + zope-lifecycleevent==5.0
+2026-04-20T12:27:36.2813988Z  + zope-location==5.0
+2026-04-20T12:27:36.2814300Z  + zope-pagetemplate==5.1
+2026-04-20T12:27:36.2814655Z  + zope-processlifetime==3.0
+2026-04-20T12:27:36.2815035Z  + zope-proxy==6.1
+2026-04-20T12:27:36.2815333Z  + zope-ptresource==5.0
+2026-04-20T12:27:36.2815635Z  + zope-publisher==7.3
+2026-04-20T12:27:36.2815944Z  + zope-pytestlayer==9.1
+2026-04-20T12:27:36.2816262Z  + zope-ramcache==3.0
+2026-04-20T12:27:36.2816563Z  + zope-schema==7.0.1
+2026-04-20T12:27:36.2816874Z  + zope-security==7.3
+2026-04-20T12:27:36.2817170Z  + zope-sendmail==6.2
+2026-04-20T12:27:36.2817481Z  + zope-sequencesort==5.0
+2026-04-20T12:27:36.2817792Z  + zope-site==5.0
+2026-04-20T12:27:36.2818074Z  + zope-size==5.0
+2026-04-20T12:27:36.2818359Z  + zope-structuredtext==5.0
+2026-04-20T12:27:36.2818940Z  + zope-tal==5.0.1
+2026-04-20T12:27:36.2819238Z  + zope-tales==6.0
+2026-04-20T12:27:36.2819843Z  + zope-testbrowser==7.0
+2026-04-20T12:27:36.2820171Z  + zope-testing==5.0.1
+2026-04-20T12:27:36.2820472Z  + zope-testrunner==7.2
+2026-04-20T12:27:36.2820785Z  + zope-traversing==5.0
+2026-04-20T12:27:36.2821084Z  + zope-viewlet==5.0
+2026-04-20T12:27:36.3029748Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:36.3057439Z ++ tput setaf 2
+2026-04-20T12:27:36.3064618Z tput: No value for $TERM and no -T specified
+2026-04-20T12:27:36.3068168Z ++ tput sgr0
+2026-04-20T12:27:36.3075194Z tput: No value for $TERM and no -T specified
+2026-04-20T12:27:36.3077032Z + echo '==> Create instance configuration'
+2026-04-20T12:27:36.3077546Z ==> Create instance configuration
+2026-04-20T12:27:36.3078283Z + uvx cookiecutter -f --no-input -c 2.4.1 --config-file instance.yaml gh:plone/cookiecutter-zope-instance
+2026-04-20T12:27:36.4696305Z Downloading pygments (1.2MiB)
+2026-04-20T12:27:36.5710581Z  Downloaded pygments
+2026-04-20T12:27:36.6173406Z Installed 21 packages in 19ms
+2026-04-20T12:27:37.6326587Z Warning: initial user's password is insecure, it should be at least 10 characters long!
+2026-04-20T12:27:37.6327001Z 
+2026-04-20T12:27:37.8773657Z ##[group]Run make test
+2026-04-20T12:27:37.8773918Z [36;1mmake test[0m
+2026-04-20T12:27:37.8796238Z shell: /usr/bin/bash --noprofile --norc -e -o pipefail {0}
+2026-04-20T12:27:37.8796556Z env:
+2026-04-20T12:27:37.8796730Z   PYTHON_VERSION: 3.12
+2026-04-20T12:27:37.8796948Z   PLONE_VERSION: 6.0-latest
+2026-04-20T12:27:37.8797162Z   UV_PYTHON: 3.12
+2026-04-20T12:27:37.8797467Z   VIRTUAL_ENV: /home/runner/work/udala.zinegotziak/udala.zinegotziak/.venv
+2026-04-20T12:27:37.8797871Z   UV_CACHE_DIR: /home/runner/work/_temp/setup-uv-cache
+2026-04-20T12:27:37.8798152Z ##[endgroup]
+2026-04-20T12:27:37.8864485Z + which uv
+2026-04-20T12:27:37.8885142Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.8905267Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.8925363Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.8945592Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.8965634Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.8986081Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.9006454Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.9026342Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.9046538Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.9066658Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.9087448Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.9107708Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.9128000Z + dirname /home/runner/work/udala.zinegotziak/udala.zinegotziak/Makefile
+2026-04-20T12:27:37.9148077Z + /home/runner/work/udala.zinegotziak/udala.zinegotziak/.venv/bin/pytest
+2026-04-20T12:27:41.4406708Z ============================= test session starts ==============================
+2026-04-20T12:27:41.4407331Z platform linux -- Python 3.12.3, pytest-9.0.3, pluggy-1.6.0
+2026-04-20T12:27:41.4407906Z rootdir: /home/runner/work/udala.zinegotziak/udala.zinegotziak
+2026-04-20T12:27:41.4408370Z configfile: pyproject.toml
+2026-04-20T12:27:41.4409143Z testpaths: tests
+2026-04-20T12:27:41.4409492Z plugins: zope.pytestlayer-9.1, cov-7.1.0, plone-1.0.0a3
+2026-04-20T12:27:41.4409919Z collected 5 items
+2026-04-20T12:27:41.4410080Z 
+2026-04-20T12:27:47.1138303Z tests/setup/test_setup_install.py EEE                                    [ 60%]
+2026-04-20T12:27:50.1295427Z tests/setup/test_setup_uninstall.py EE                                   [100%]
+2026-04-20T12:27:50.1296088Z 
+2026-04-20T12:27:50.1296317Z ==================================== ERRORS ====================================
+2026-04-20T12:27:50.1297483Z ___________ ERROR at setup of TestSetupInstall.test_addon_installed ____________
+2026-04-20T12:27:50.1298033Z 
+2026-04-20T12:27:50.1298502Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128e0578f0>
+2026-04-20T12:27:50.1299903Z name = ('http://namespaces.zope.org/zope', 'adapter'), qname = None
+2026-04-20T12:27:50.1300385Z 
+2026-04-20T12:27:50.1300559Z     def endElementNS(self, name, qname):
+2026-04-20T12:27:50.1301144Z         # If ignore_depth is set, this element will be ignored, even
+2026-04-20T12:27:50.1301778Z         # if this this decrements ignore_depth to 0.
+2026-04-20T12:27:50.1302304Z         if self.ignore_depth:
+2026-04-20T12:27:50.1302726Z             self.ignore_depth -= 1
+2026-04-20T12:27:50.1303135Z             return
+2026-04-20T12:27:50.1303441Z     
+2026-04-20T12:27:50.1303751Z         info = self.context.getInfo()
+2026-04-20T12:27:50.1304178Z         info.end(
+2026-04-20T12:27:50.1304550Z             self.locator.getLineNumber(),
+2026-04-20T12:27:50.1305052Z             self.locator.getColumnNumber(),
+2026-04-20T12:27:50.1305840Z         )
+2026-04-20T12:27:50.1306146Z     
+2026-04-20T12:27:50.1306411Z         try:
+2026-04-20T12:27:50.1306740Z >           self.context.end()
+2026-04-20T12:27:50.1307021Z 
+2026-04-20T12:27:50.1307400Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: 
+2026-04-20T12:27:50.1308151Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1309173Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1309905Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1310540Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:917: in finish
+2026-04-20T12:27:50.1311249Z     args = toargs(context, *self.argdata)
+2026-04-20T12:27:50.1311709Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1312367Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:1759: in toargs
+2026-04-20T12:27:50.1313086Z     args[str(name)] = field.fromUnicode(s)
+2026-04-20T12:27:50.1313586Z                       ^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1314268Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:272: in fromUnicode
+2026-04-20T12:27:50.1315004Z     v = vt.fromUnicode(s)
+2026-04-20T12:27:50.1315364Z         ^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1315979Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:174: in fromUnicode
+2026-04-20T12:27:50.1316714Z     value = self.context.resolve(name)
+2026-04-20T12:27:50.1317147Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1317802Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:220: in resolve
+2026-04-20T12:27:50.1318467Z     __import__(mname)
+2026-04-20T12:27:50.1319230Z src/udala/zinegotziak/indexers/commissions_index.py:3: in <module>
+2026-04-20T12:27:50.1320043Z     from udala.zinegotziak.content.councillor import ICouncillor
+2026-04-20T12:27:50.1320735Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1321148Z 
+2026-04-20T12:27:50.1321609Z     from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
+2026-04-20T12:27:50.1322531Z     from collective.z3cform.datagridfield.registry import DictRow
+2026-04-20T12:27:50.1323228Z     from plone.app.dexterity import textindexer
+2026-04-20T12:27:50.1323969Z     from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
+2026-04-20T12:27:50.1324727Z     from plone.app.textfield import RichText
+2026-04-20T12:27:50.1325387Z     from plone.app.vocabularies.catalog import StaticCatalogVocabulary
+2026-04-20T12:27:50.1326292Z >   from plone.app.z3cform.widgets.contentbrowser import ContentBrowserFieldWidget
+2026-04-20T12:27:50.1327325Z E   ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1327925Z 
+2026-04-20T12:27:50.1328248Z src/udala/zinegotziak/content/councillor.py:7: ModuleNotFoundError
+2026-04-20T12:27:50.1329472Z 
+2026-04-20T12:27:50.1329800Z During handling of the above exception, another exception occurred:
+2026-04-20T12:27:50.1330278Z 
+2026-04-20T12:27:50.1330950Z request = <SubRequest 'zope_layer_class_udala_zinegotziak_testing_FIXTURE_139717731947088' for <Function test_addon_installed>>
+2026-04-20T12:27:50.1331995Z layer = <Layer 'udala.zinegotziak.testing.Layer'>
+2026-04-20T12:27:50.1332377Z 
+2026-04-20T12:27:50.1332552Z     def class_fixture(request, layer):
+2026-04-20T12:27:50.1333052Z         state = request.session.zopelayer_state
+2026-04-20T12:27:50.1333551Z         if layer not in state.current:
+2026-04-20T12:27:50.1333978Z >           setup_layer(layer, request)
+2026-04-20T12:27:50.1334281Z 
+2026-04-20T12:27:50.1334594Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:69: 
+2026-04-20T12:27:50.1335326Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1336141Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:40: in setup_layer
+2026-04-20T12:27:50.1336843Z     layer.setUp()
+2026-04-20T12:27:50.1337889Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:371: in setUp
+2026-04-20T12:27:50.1339141Z     self.setUpZope(portal.getPhysicalRoot(), configurationContext)
+2026-04-20T12:27:50.1339762Z src/udala/zinegotziak/testing.py:24: in setUpZope
+2026-04-20T12:27:50.1340244Z     self.loadZCML(package=udala.zinegotziak)
+2026-04-20T12:27:50.1340854Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:447: in loadZCML
+2026-04-20T12:27:50.1341471Z     return xmlconfig.file(name, **kw)
+2026-04-20T12:27:50.1341836Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1342372Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:717: in file
+2026-04-20T12:27:50.1342957Z     include(context, name, package)
+2026-04-20T12:27:50.1343513Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1344118Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1344759Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1345403Z     parser.parse(src)
+2026-04-20T12:27:50.1345792Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1346306Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1346797Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1347211Z     self.feed(buffer)
+2026-04-20T12:27:50.1347572Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1348005Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1348380Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1348936Z     ???
+2026-04-20T12:27:50.1349290Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1349812Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1350450Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1351117Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1351718Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1352334Z     self.context.end()
+2026-04-20T12:27:50.1352802Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1353353Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1353877Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1354450Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1354830Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1355382Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1355974Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1356573Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1357194Z     parser.parse(src)
+2026-04-20T12:27:50.1357785Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1358303Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1359009Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1359418Z     self.feed(buffer)
+2026-04-20T12:27:50.1359779Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1360221Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1360605Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1360952Z     ???
+2026-04-20T12:27:50.1361334Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1361875Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1362513Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1363160Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1363744Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1364373Z     self.context.end()
+2026-04-20T12:27:50.1365018Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1365607Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1366146Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1366750Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1367136Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1367729Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1368340Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1369085Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1369712Z     parser.parse(src)
+2026-04-20T12:27:50.1370089Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1370592Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1371090Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1371513Z     self.feed(buffer)
+2026-04-20T12:27:50.1371874Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1372308Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1372683Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1373020Z     ???
+2026-04-20T12:27:50.1373376Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1373898Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1374523Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1375157Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1375579Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1375915Z 
+2026-04-20T12:27:50.1376282Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128e0578f0>
+2026-04-20T12:27:50.1377147Z ex = ModuleNotFoundError("No module named 'plone.app.z3cform.widgets.contentbrowser'")
+2026-04-20T12:27:50.1378289Z info = File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1379274Z 
+2026-04-20T12:27:50.1379422Z     def _handle_exception(self, ex, info):
+2026-04-20T12:27:50.1379798Z         if self.testing:
+2026-04-20T12:27:50.1380089Z             raise
+2026-04-20T12:27:50.1380389Z         if isinstance(ex, ConfigurationError):
+2026-04-20T12:27:50.1380793Z             ex.add_details(repr(info))
+2026-04-20T12:27:50.1381138Z             raise
+2026-04-20T12:27:50.1381370Z     
+2026-04-20T12:27:50.1381662Z >       raise ZopeXMLConfigurationError(info, ex)
+2026-04-20T12:27:50.1382933Z E       zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1384601Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.1386044Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.1387126Z E           ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1387637Z 
+2026-04-20T12:27:50.1388216Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:237: ZopeXMLConfigurationError
+2026-04-20T12:27:50.1389317Z ---------------------------- Captured stdout setup -----------------------------
+2026-04-20T12:27:50.1389872Z plone.testing.zca.LAYER_CLEANUP
+2026-04-20T12:27:50.1390241Z plone.testing.zope.STARTUP
+2026-04-20T12:27:50.1390594Z plone.app.testing.layers.PLONE_FIXTURE
+2026-04-20T12:27:50.1391115Z plone.app.contenttypes.testing.PLONE_APP_CONTENTTYPES_FIXTURE
+2026-04-20T12:27:50.1391631Z udala.zinegotziak.testing.FIXTURE
+2026-04-20T12:27:50.1392122Z ------------------------------ Captured log setup ------------------------------
+2026-04-20T12:27:50.1393706Z WARNING  GenericSetup.componentregistry:context.py:98 The object None was not found, while trying to register an utility. The provided object definition was portal_metadata. The site used was: <PloneSite at /plone>
+2026-04-20T12:27:50.1395937Z WARNING  GenericSetup.componentregistry:context.py:98 The object None was not found, while trying to register an utility. The provided object definition was portal_syndication. The site used was: <PloneSite at /plone>
+2026-04-20T12:27:50.1398074Z WARNING  GenericSetup.componentregistry:context.py:98 The object None was not found, while trying to register an utility. The provided object definition was portal_undo. The site used was: <PloneSite at /plone>
+2026-04-20T12:27:50.1400377Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type text/plain (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.text_plain'>)
+2026-04-20T12:27:50.1402510Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type application/msword (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.application_msword'>)
+2026-04-20T12:27:50.1404606Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type text/xml (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.text_xml'>)
+2026-04-20T12:27:50.1406632Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type text/x-python (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.text_python'>)
+2026-04-20T12:27:50.1409014Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type application/octet-stream (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.application_octet_stream'>)
+2026-04-20T12:27:50.1411288Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type application/rtf (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.application_rtf'>)
+2026-04-20T12:27:50.1413379Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type text/html (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.text_html'>)
+2026-04-20T12:27:50.1414878Z ERROR    Plone:quickinstaller.py:306 Could not install plone.app.event: profile already installed.
+2026-04-20T12:27:50.1415701Z _____________ ERROR at setup of TestSetupInstall.test_browserlayer _____________
+2026-04-20T12:27:50.1416121Z 
+2026-04-20T12:27:50.1416480Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128e0578f0>
+2026-04-20T12:27:50.1417243Z name = ('http://namespaces.zope.org/zope', 'adapter'), qname = None
+2026-04-20T12:27:50.1417625Z 
+2026-04-20T12:27:50.1417759Z     def endElementNS(self, name, qname):
+2026-04-20T12:27:50.1418234Z         # If ignore_depth is set, this element will be ignored, even
+2026-04-20T12:27:50.1418950Z         # if this this decrements ignore_depth to 0.
+2026-04-20T12:27:50.1419546Z         if self.ignore_depth:
+2026-04-20T12:27:50.1419886Z             self.ignore_depth -= 1
+2026-04-20T12:27:50.1420231Z             return
+2026-04-20T12:27:50.1420486Z     
+2026-04-20T12:27:50.1420736Z         info = self.context.getInfo()
+2026-04-20T12:27:50.1421079Z         info.end(
+2026-04-20T12:27:50.1421364Z             self.locator.getLineNumber(),
+2026-04-20T12:27:50.1421768Z             self.locator.getColumnNumber(),
+2026-04-20T12:27:50.1422125Z         )
+2026-04-20T12:27:50.1422338Z     
+2026-04-20T12:27:50.1422561Z         try:
+2026-04-20T12:27:50.1422816Z >           self.context.end()
+2026-04-20T12:27:50.1423033Z 
+2026-04-20T12:27:50.1423320Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: 
+2026-04-20T12:27:50.1423937Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1424558Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1425127Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1425793Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:917: in finish
+2026-04-20T12:27:50.1426388Z     args = toargs(context, *self.argdata)
+2026-04-20T12:27:50.1426751Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1427299Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:1759: in toargs
+2026-04-20T12:27:50.1427886Z     args[str(name)] = field.fromUnicode(s)
+2026-04-20T12:27:50.1428270Z                       ^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1429019Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:272: in fromUnicode
+2026-04-20T12:27:50.1429614Z     v = vt.fromUnicode(s)
+2026-04-20T12:27:50.1429909Z         ^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1430409Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:174: in fromUnicode
+2026-04-20T12:27:50.1431006Z     value = self.context.resolve(name)
+2026-04-20T12:27:50.1431362Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1431898Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:220: in resolve
+2026-04-20T12:27:50.1432477Z     __import__(mname)
+2026-04-20T12:27:50.1432914Z src/udala/zinegotziak/indexers/commissions_index.py:3: in <module>
+2026-04-20T12:27:50.1433558Z     from udala.zinegotziak.content.councillor import ICouncillor
+2026-04-20T12:27:50.1434116Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1434448Z 
+2026-04-20T12:27:50.1434811Z     from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
+2026-04-20T12:27:50.1435575Z     from collective.z3cform.datagridfield.registry import DictRow
+2026-04-20T12:27:50.1436126Z     from plone.app.dexterity import textindexer
+2026-04-20T12:27:50.1436753Z     from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
+2026-04-20T12:27:50.1437380Z     from plone.app.textfield import RichText
+2026-04-20T12:27:50.1437923Z     from plone.app.vocabularies.catalog import StaticCatalogVocabulary
+2026-04-20T12:27:50.1438813Z >   from plone.app.z3cform.widgets.contentbrowser import ContentBrowserFieldWidget
+2026-04-20T12:27:50.1439657Z E   ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1440160Z 
+2026-04-20T12:27:50.1440418Z src/udala/zinegotziak/content/councillor.py:7: ModuleNotFoundError
+2026-04-20T12:27:50.1440823Z 
+2026-04-20T12:27:50.1441069Z During handling of the above exception, another exception occurred:
+2026-04-20T12:27:50.1441462Z 
+2026-04-20T12:27:50.1442010Z request = <SubRequest 'zope_layer_class_udala_zinegotziak_testing_FIXTURE_139717731947088' for <Function test_addon_installed>>
+2026-04-20T12:27:50.1442876Z layer = <Layer 'udala.zinegotziak.testing.Layer'>
+2026-04-20T12:27:50.1443188Z 
+2026-04-20T12:27:50.1443320Z     def class_fixture(request, layer):
+2026-04-20T12:27:50.1443710Z         state = request.session.zopelayer_state
+2026-04-20T12:27:50.1444120Z         if layer not in state.current:
+2026-04-20T12:27:50.1444667Z >           setup_layer(layer, request)
+2026-04-20T12:27:50.1444908Z 
+2026-04-20T12:27:50.1445168Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:69: 
+2026-04-20T12:27:50.1445749Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1446386Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:40: in setup_layer
+2026-04-20T12:27:50.1446945Z     layer.setUp()
+2026-04-20T12:27:50.1447391Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:371: in setUp
+2026-04-20T12:27:50.1448122Z     self.setUpZope(portal.getPhysicalRoot(), configurationContext)
+2026-04-20T12:27:50.1448865Z src/udala/zinegotziak/testing.py:24: in setUpZope
+2026-04-20T12:27:50.1449309Z     self.loadZCML(package=udala.zinegotziak)
+2026-04-20T12:27:50.1449881Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:447: in loadZCML
+2026-04-20T12:27:50.1450461Z     return xmlconfig.file(name, **kw)
+2026-04-20T12:27:50.1450815Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1451341Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:717: in file
+2026-04-20T12:27:50.1452091Z     include(context, name, package)
+2026-04-20T12:27:50.1452659Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1453226Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1453802Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1454413Z     parser.parse(src)
+2026-04-20T12:27:50.1454795Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1455309Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1455809Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1456230Z     self.feed(buffer)
+2026-04-20T12:27:50.1456583Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1457023Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1457392Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1457747Z     ???
+2026-04-20T12:27:50.1458123Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1458868Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1459504Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1460129Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1460698Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1461289Z     self.context.end()
+2026-04-20T12:27:50.1461748Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1462294Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1462797Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1463362Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1463781Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1464353Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1464943Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1465516Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1466125Z     parser.parse(src)
+2026-04-20T12:27:50.1466488Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1466993Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1467496Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1467932Z     self.feed(buffer)
+2026-04-20T12:27:50.1468295Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1468982Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1469345Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1469582Z     ???
+2026-04-20T12:27:50.1469826Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1470181Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1470765Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1471181Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1471574Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1471974Z     self.context.end()
+2026-04-20T12:27:50.1472314Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1472677Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1473019Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1473402Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1473654Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1474018Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1474398Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1474796Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1475212Z     parser.parse(src)
+2026-04-20T12:27:50.1475586Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1475926Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1476256Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1476528Z     self.feed(buffer)
+2026-04-20T12:27:50.1476770Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1477067Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1477316Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1477551Z     ???
+2026-04-20T12:27:50.1477789Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1478140Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1478771Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1479227Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1479525Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1479752Z 
+2026-04-20T12:27:50.1479989Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128e0578f0>
+2026-04-20T12:27:50.1480551Z ex = ModuleNotFoundError("No module named 'plone.app.z3cform.widgets.contentbrowser'")
+2026-04-20T12:27:50.1481279Z info = File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1481779Z 
+2026-04-20T12:27:50.1481874Z     def _handle_exception(self, ex, info):
+2026-04-20T12:27:50.1482137Z         if self.testing:
+2026-04-20T12:27:50.1482331Z             raise
+2026-04-20T12:27:50.1482544Z         if isinstance(ex, ConfigurationError):
+2026-04-20T12:27:50.1482809Z             ex.add_details(repr(info))
+2026-04-20T12:27:50.1483036Z             raise
+2026-04-20T12:27:50.1483198Z     
+2026-04-20T12:27:50.1483397Z >       raise ZopeXMLConfigurationError(info, ex)
+2026-04-20T12:27:50.1484218Z E       zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1485295Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.1486093Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.1486785Z E           ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1487125Z 
+2026-04-20T12:27:50.1487401Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:237: ZopeXMLConfigurationError
+2026-04-20T12:27:50.1487952Z ____________ ERROR at setup of TestSetupInstall.test_latest_version ____________
+2026-04-20T12:27:50.1488230Z 
+2026-04-20T12:27:50.1488464Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128e0578f0>
+2026-04-20T12:27:50.1489401Z name = ('http://namespaces.zope.org/zope', 'adapter'), qname = None
+2026-04-20T12:27:50.1489661Z 
+2026-04-20T12:27:50.1489757Z     def endElementNS(self, name, qname):
+2026-04-20T12:27:50.1490101Z         # If ignore_depth is set, this element will be ignored, even
+2026-04-20T12:27:50.1490458Z         # if this this decrements ignore_depth to 0.
+2026-04-20T12:27:50.1490745Z         if self.ignore_depth:
+2026-04-20T12:27:50.1490975Z             self.ignore_depth -= 1
+2026-04-20T12:27:50.1491193Z             return
+2026-04-20T12:27:50.1491367Z     
+2026-04-20T12:27:50.1491544Z         info = self.context.getInfo()
+2026-04-20T12:27:50.1491780Z         info.end(
+2026-04-20T12:27:50.1491976Z             self.locator.getLineNumber(),
+2026-04-20T12:27:50.1492249Z             self.locator.getColumnNumber(),
+2026-04-20T12:27:50.1492487Z         )
+2026-04-20T12:27:50.1492643Z     
+2026-04-20T12:27:50.1492794Z         try:
+2026-04-20T12:27:50.1492988Z >           self.context.end()
+2026-04-20T12:27:50.1493133Z 
+2026-04-20T12:27:50.1493498Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: 
+2026-04-20T12:27:50.1493907Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1494317Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1494678Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1495022Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:917: in finish
+2026-04-20T12:27:50.1495395Z     args = toargs(context, *self.argdata)
+2026-04-20T12:27:50.1495639Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1495997Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:1759: in toargs
+2026-04-20T12:27:50.1496373Z     args[str(name)] = field.fromUnicode(s)
+2026-04-20T12:27:50.1496622Z                       ^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1496986Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:272: in fromUnicode
+2026-04-20T12:27:50.1497377Z     v = vt.fromUnicode(s)
+2026-04-20T12:27:50.1497583Z         ^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1497916Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:174: in fromUnicode
+2026-04-20T12:27:50.1498312Z     value = self.context.resolve(name)
+2026-04-20T12:27:50.1498552Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1499056Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:220: in resolve
+2026-04-20T12:27:50.1499414Z     __import__(mname)
+2026-04-20T12:27:50.1499706Z src/udala/zinegotziak/indexers/commissions_index.py:3: in <module>
+2026-04-20T12:27:50.1500125Z     from udala.zinegotziak.content.councillor import ICouncillor
+2026-04-20T12:27:50.1500505Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1500724Z 
+2026-04-20T12:27:50.1500967Z     from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
+2026-04-20T12:27:50.1501460Z     from collective.z3cform.datagridfield.registry import DictRow
+2026-04-20T12:27:50.1501833Z     from plone.app.dexterity import textindexer
+2026-04-20T12:27:50.1502230Z     from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
+2026-04-20T12:27:50.1502635Z     from plone.app.textfield import RichText
+2026-04-20T12:27:50.1502987Z     from plone.app.vocabularies.catalog import StaticCatalogVocabulary
+2026-04-20T12:27:50.1503476Z >   from plone.app.z3cform.widgets.contentbrowser import ContentBrowserFieldWidget
+2026-04-20T12:27:50.1504015Z E   ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1504333Z 
+2026-04-20T12:27:50.1504506Z src/udala/zinegotziak/content/councillor.py:7: ModuleNotFoundError
+2026-04-20T12:27:50.1504769Z 
+2026-04-20T12:27:50.1504938Z During handling of the above exception, another exception occurred:
+2026-04-20T12:27:50.1505193Z 
+2026-04-20T12:27:50.1505551Z request = <SubRequest 'zope_layer_class_udala_zinegotziak_testing_FIXTURE_139717731947088' for <Function test_addon_installed>>
+2026-04-20T12:27:50.1506249Z layer = <Layer 'udala.zinegotziak.testing.Layer'>
+2026-04-20T12:27:50.1506452Z 
+2026-04-20T12:27:50.1506553Z     def class_fixture(request, layer):
+2026-04-20T12:27:50.1506814Z         state = request.session.zopelayer_state
+2026-04-20T12:27:50.1507089Z         if layer not in state.current:
+2026-04-20T12:27:50.1507330Z >           setup_layer(layer, request)
+2026-04-20T12:27:50.1507505Z 
+2026-04-20T12:27:50.1507687Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:69: 
+2026-04-20T12:27:50.1508080Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1508508Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:40: in setup_layer
+2026-04-20T12:27:50.1509144Z     layer.setUp()
+2026-04-20T12:27:50.1509447Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:371: in setUp
+2026-04-20T12:27:50.1509908Z     self.setUpZope(portal.getPhysicalRoot(), configurationContext)
+2026-04-20T12:27:50.1510443Z src/udala/zinegotziak/testing.py:24: in setUpZope
+2026-04-20T12:27:50.1510760Z     self.loadZCML(package=udala.zinegotziak)
+2026-04-20T12:27:50.1511149Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:447: in loadZCML
+2026-04-20T12:27:50.1511528Z     return xmlconfig.file(name, **kw)
+2026-04-20T12:27:50.1511798Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1512135Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:717: in file
+2026-04-20T12:27:50.1512515Z     include(context, name, package)
+2026-04-20T12:27:50.1512875Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1513261Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1513645Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1514049Z     parser.parse(src)
+2026-04-20T12:27:50.1514306Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1514651Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1514990Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1515262Z     self.feed(buffer)
+2026-04-20T12:27:50.1515509Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1515799Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1516056Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1516292Z     ???
+2026-04-20T12:27:50.1516535Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1516889Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1517299Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1517714Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1518093Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1518494Z     self.context.end()
+2026-04-20T12:27:50.1519035Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1519402Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1519751Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1520130Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1520386Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1520747Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1521136Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1521517Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1521918Z     parser.parse(src)
+2026-04-20T12:27:50.1522176Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1522512Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1522847Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1523244Z     self.feed(buffer)
+2026-04-20T12:27:50.1523489Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1523781Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1524037Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1524270Z     ???
+2026-04-20T12:27:50.1524508Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1524857Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1525265Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1525680Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1526060Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1526454Z     self.context.end()
+2026-04-20T12:27:50.1526756Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1527118Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1527458Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1527940Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1528198Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1528734Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1529175Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1529562Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1529972Z     parser.parse(src)
+2026-04-20T12:27:50.1530232Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1530568Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1530899Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1531175Z     self.feed(buffer)
+2026-04-20T12:27:50.1531415Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1531702Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1531963Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1532193Z     ???
+2026-04-20T12:27:50.1532443Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1532800Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1533215Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1533630Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1533911Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1534140Z 
+2026-04-20T12:27:50.1534380Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128e0578f0>
+2026-04-20T12:27:50.1534950Z ex = ModuleNotFoundError("No module named 'plone.app.z3cform.widgets.contentbrowser'")
+2026-04-20T12:27:50.1535679Z info = File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1536178Z 
+2026-04-20T12:27:50.1536273Z     def _handle_exception(self, ex, info):
+2026-04-20T12:27:50.1536525Z         if self.testing:
+2026-04-20T12:27:50.1536722Z             raise
+2026-04-20T12:27:50.1536933Z         if isinstance(ex, ConfigurationError):
+2026-04-20T12:27:50.1537214Z             ex.add_details(repr(info))
+2026-04-20T12:27:50.1537447Z             raise
+2026-04-20T12:27:50.1537611Z     
+2026-04-20T12:27:50.1537810Z >       raise ZopeXMLConfigurationError(info, ex)
+2026-04-20T12:27:50.1538753Z E       zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1539812Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.1540617Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.1541450Z E           ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1541787Z 
+2026-04-20T12:27:50.1542070Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:237: ZopeXMLConfigurationError
+2026-04-20T12:27:50.1542624Z _________ ERROR at setup of TestSetupUninstall.test_addon_uninstalled __________
+2026-04-20T12:27:50.1542916Z 
+2026-04-20T12:27:50.1543151Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128de752e0>
+2026-04-20T12:27:50.1543644Z name = ('http://namespaces.zope.org/zope', 'adapter'), qname = None
+2026-04-20T12:27:50.1543914Z 
+2026-04-20T12:27:50.1544006Z     def endElementNS(self, name, qname):
+2026-04-20T12:27:50.1544322Z         # If ignore_depth is set, this element will be ignored, even
+2026-04-20T12:27:50.1544658Z         # if this this decrements ignore_depth to 0.
+2026-04-20T12:27:50.1544933Z         if self.ignore_depth:
+2026-04-20T12:27:50.1545157Z             self.ignore_depth -= 1
+2026-04-20T12:27:50.1545384Z             return
+2026-04-20T12:27:50.1545549Z     
+2026-04-20T12:27:50.1545841Z         info = self.context.getInfo()
+2026-04-20T12:27:50.1546079Z         info.end(
+2026-04-20T12:27:50.1546275Z             self.locator.getLineNumber(),
+2026-04-20T12:27:50.1546545Z             self.locator.getColumnNumber(),
+2026-04-20T12:27:50.1546782Z         )
+2026-04-20T12:27:50.1546934Z     
+2026-04-20T12:27:50.1547084Z         try:
+2026-04-20T12:27:50.1547263Z >           self.context.end()
+2026-04-20T12:27:50.1547405Z 
+2026-04-20T12:27:50.1547590Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: 
+2026-04-20T12:27:50.1547992Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1548396Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1549017Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1549362Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:917: in finish
+2026-04-20T12:27:50.1549743Z     args = toargs(context, *self.argdata)
+2026-04-20T12:27:50.1549994Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1550340Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:1759: in toargs
+2026-04-20T12:27:50.1550725Z     args[str(name)] = field.fromUnicode(s)
+2026-04-20T12:27:50.1550971Z                       ^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1551333Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:272: in fromUnicode
+2026-04-20T12:27:50.1551732Z     v = vt.fromUnicode(s)
+2026-04-20T12:27:50.1551933Z         ^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1552262Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:174: in fromUnicode
+2026-04-20T12:27:50.1552663Z     value = self.context.resolve(name)
+2026-04-20T12:27:50.1552909Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1553255Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:220: in resolve
+2026-04-20T12:27:50.1553615Z     __import__(mname)
+2026-04-20T12:27:50.1553912Z src/udala/zinegotziak/indexers/commissions_index.py:3: in <module>
+2026-04-20T12:27:50.1554328Z     from udala.zinegotziak.content.councillor import ICouncillor
+2026-04-20T12:27:50.1554717Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1554941Z 
+2026-04-20T12:27:50.1555174Z     from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
+2026-04-20T12:27:50.1555668Z     from collective.z3cform.datagridfield.registry import DictRow
+2026-04-20T12:27:50.1556035Z     from plone.app.dexterity import textindexer
+2026-04-20T12:27:50.1556429Z     from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
+2026-04-20T12:27:50.1556832Z     from plone.app.textfield import RichText
+2026-04-20T12:27:50.1557188Z     from plone.app.vocabularies.catalog import StaticCatalogVocabulary
+2026-04-20T12:27:50.1557678Z >   from plone.app.z3cform.widgets.contentbrowser import ContentBrowserFieldWidget
+2026-04-20T12:27:50.1558353Z E   ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1558905Z 
+2026-04-20T12:27:50.1559081Z src/udala/zinegotziak/content/councillor.py:7: ModuleNotFoundError
+2026-04-20T12:27:50.1559341Z 
+2026-04-20T12:27:50.1559514Z During handling of the above exception, another exception occurred:
+2026-04-20T12:27:50.1559767Z 
+2026-04-20T12:27:50.1560127Z request = <SubRequest 'zope_layer_class_udala_zinegotziak_testing_FIXTURE_139717731947088' for <Function test_addon_uninstalled>>
+2026-04-20T12:27:50.1560703Z layer = <Layer 'udala.zinegotziak.testing.Layer'>
+2026-04-20T12:27:50.1560907Z 
+2026-04-20T12:27:50.1561002Z     def class_fixture(request, layer):
+2026-04-20T12:27:50.1561265Z         state = request.session.zopelayer_state
+2026-04-20T12:27:50.1561538Z         if layer not in state.current:
+2026-04-20T12:27:50.1561778Z >           setup_layer(layer, request)
+2026-04-20T12:27:50.1561945Z 
+2026-04-20T12:27:50.1562115Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:69: 
+2026-04-20T12:27:50.1562617Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1563049Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:40: in setup_layer
+2026-04-20T12:27:50.1563428Z     layer.setUp()
+2026-04-20T12:27:50.1563725Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:371: in setUp
+2026-04-20T12:27:50.1564185Z     self.setUpZope(portal.getPhysicalRoot(), configurationContext)
+2026-04-20T12:27:50.1564550Z src/udala/zinegotziak/testing.py:24: in setUpZope
+2026-04-20T12:27:50.1564848Z     self.loadZCML(package=udala.zinegotziak)
+2026-04-20T12:27:50.1565223Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:447: in loadZCML
+2026-04-20T12:27:50.1565613Z     return xmlconfig.file(name, **kw)
+2026-04-20T12:27:50.1565855Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1566198Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:717: in file
+2026-04-20T12:27:50.1566584Z     include(context, name, package)
+2026-04-20T12:27:50.1566949Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1567340Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1567720Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1568131Z     parser.parse(src)
+2026-04-20T12:27:50.1568385Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1569000Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1569338Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1569613Z     self.feed(buffer)
+2026-04-20T12:27:50.1569855Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1570145Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1570401Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1570631Z     ???
+2026-04-20T12:27:50.1570878Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1571239Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1571657Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1572073Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1572451Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1572851Z     self.context.end()
+2026-04-20T12:27:50.1573157Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1573527Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1573860Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1574246Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1574498Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1574860Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1575390Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1575771Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1576183Z     parser.parse(src)
+2026-04-20T12:27:50.1576431Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1576774Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1577104Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1577375Z     self.feed(buffer)
+2026-04-20T12:27:50.1577615Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1577905Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1578155Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1578380Z     ???
+2026-04-20T12:27:50.1578770Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1579120Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1579534Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1579949Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1580439Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1580843Z     self.context.end()
+2026-04-20T12:27:50.1581141Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1581504Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1581835Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1582218Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1582465Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1582821Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1583205Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1583579Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1583987Z     parser.parse(src)
+2026-04-20T12:27:50.1584235Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1584574Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1584900Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1585171Z     self.feed(buffer)
+2026-04-20T12:27:50.1585409Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1585701Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1585952Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1586180Z     ???
+2026-04-20T12:27:50.1586422Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1586767Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1587182Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1587596Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1587874Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1588102Z 
+2026-04-20T12:27:50.1588350Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128de752e0>
+2026-04-20T12:27:50.1589188Z ex = ModuleNotFoundError("No module named 'plone.app.z3cform.widgets.contentbrowser'")
+2026-04-20T12:27:50.1589955Z info = File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1590447Z 
+2026-04-20T12:27:50.1590547Z     def _handle_exception(self, ex, info):
+2026-04-20T12:27:50.1590793Z         if self.testing:
+2026-04-20T12:27:50.1590988Z             raise
+2026-04-20T12:27:50.1591581Z         if isinstance(ex, ConfigurationError):
+2026-04-20T12:27:50.1591944Z             ex.add_details(repr(info))
+2026-04-20T12:27:50.1592322Z             raise
+2026-04-20T12:27:50.1592535Z     
+2026-04-20T12:27:50.1592927Z >       raise ZopeXMLConfigurationError(info, ex)
+2026-04-20T12:27:50.1593862Z E       zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1595118Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.1596127Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.1596925Z E           ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1597291Z 
+2026-04-20T12:27:50.1597581Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:237: ZopeXMLConfigurationError
+2026-04-20T12:27:50.1598274Z ---------------------------- Captured stdout setup -----------------------------
+2026-04-20T12:27:50.1598981Z plone.testing.zca.LAYER_CLEANUP
+2026-04-20T12:27:50.1611204Z plone.testing.zope.STARTUP
+2026-04-20T12:27:50.1611512Z plone.app.testing.layers.PLONE_FIXTURE
+2026-04-20T12:27:50.1611936Z plone.app.contenttypes.testing.PLONE_APP_CONTENTTYPES_FIXTURE
+2026-04-20T12:27:50.1612487Z udala.zinegotziak.testing.FIXTURE
+2026-04-20T12:27:50.1612852Z ------------------------------ Captured log setup ------------------------------
+2026-04-20T12:27:50.1613385Z WARNING  SecurityInfo:SecurityInfo.py:81 Conflicting security declarations for 'add'
+2026-04-20T12:27:50.1613958Z WARNING  SecurityInfo:SecurityInfo.py:81 Conflicting security declarations for 'addingInfo'
+2026-04-20T12:27:50.1614555Z WARNING  SecurityInfo:SecurityInfo.py:81 Conflicting security declarations for 'contentName'
+2026-04-20T12:27:50.1615121Z WARNING  SecurityInfo:SecurityInfo.py:81 Conflicting security declarations for 'context'
+2026-04-20T12:27:50.1615724Z WARNING  SecurityInfo:SecurityInfo.py:81 Conflicting security declarations for 'hasCustomAddView'
+2026-04-20T12:27:50.1616350Z WARNING  SecurityInfo:SecurityInfo.py:81 Conflicting security declarations for 'isSingleMenuItem'
+2026-04-20T12:27:50.1616950Z WARNING  SecurityInfo:SecurityInfo.py:81 Conflicting security declarations for 'nameAllowed'
+2026-04-20T12:27:50.1617528Z WARNING  SecurityInfo:SecurityInfo.py:81 Conflicting security declarations for 'nextURL'
+2026-04-20T12:27:50.1618078Z WARNING  SecurityInfo:SecurityInfo.py:81 Conflicting security declarations for 'request'
+2026-04-20T12:27:50.1618817Z WARNING  SecurityInfo:SecurityInfo.py:252 Class "+" had conflicting security declarations
+2026-04-20T12:27:50.1619816Z WARNING  GenericSetup.componentregistry:context.py:98 The object None was not found, while trying to register an utility. The provided object definition was portal_metadata. The site used was: <PloneSite at /plone>
+2026-04-20T12:27:50.1621262Z WARNING  GenericSetup.componentregistry:context.py:98 The object None was not found, while trying to register an utility. The provided object definition was portal_syndication. The site used was: <PloneSite at /plone>
+2026-04-20T12:27:50.1622652Z WARNING  GenericSetup.componentregistry:context.py:98 The object None was not found, while trying to register an utility. The provided object definition was portal_undo. The site used was: <PloneSite at /plone>
+2026-04-20T12:27:50.1623995Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type text/plain (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.text_plain'>)
+2026-04-20T12:27:50.1625327Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type application/msword (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.application_msword'>)
+2026-04-20T12:27:50.1626641Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type text/xml (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.text_xml'>)
+2026-04-20T12:27:50.1627904Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type text/x-python (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.text_python'>)
+2026-04-20T12:27:50.1629651Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type application/octet-stream (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.application_octet_stream'>)
+2026-04-20T12:27:50.1631073Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type application/rtf (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.application_rtf'>)
+2026-04-20T12:27:50.1632372Z WARNING  Products.MimetypesRegistry.MimeTypesRegistry:MimeTypesRegistry.py:120 Redefining mime type text/html (<class 'Products.MimetypesRegistry.mime_types.mtr_mimetypes.text_html'>)
+2026-04-20T12:27:50.1633302Z ERROR    Plone:quickinstaller.py:306 Could not install plone.app.event: profile already installed.
+2026-04-20T12:27:50.1633866Z ____ ERROR at setup of TestSetupUninstall.test_browserlayer_not_registered _____
+2026-04-20T12:27:50.1634169Z 
+2026-04-20T12:27:50.1634410Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128de752e0>
+2026-04-20T12:27:50.1635060Z name = ('http://namespaces.zope.org/zope', 'adapter'), qname = None
+2026-04-20T12:27:50.1635323Z 
+2026-04-20T12:27:50.1635430Z     def endElementNS(self, name, qname):
+2026-04-20T12:27:50.1635747Z         # If ignore_depth is set, this element will be ignored, even
+2026-04-20T12:27:50.1636089Z         # if this this decrements ignore_depth to 0.
+2026-04-20T12:27:50.1636363Z         if self.ignore_depth:
+2026-04-20T12:27:50.1636603Z             self.ignore_depth -= 1
+2026-04-20T12:27:50.1636827Z             return
+2026-04-20T12:27:50.1637003Z     
+2026-04-20T12:27:50.1637190Z         info = self.context.getInfo()
+2026-04-20T12:27:50.1637424Z         info.end(
+2026-04-20T12:27:50.1637631Z             self.locator.getLineNumber(),
+2026-04-20T12:27:50.1637897Z             self.locator.getColumnNumber(),
+2026-04-20T12:27:50.1638140Z         )
+2026-04-20T12:27:50.1638290Z     
+2026-04-20T12:27:50.1638444Z         try:
+2026-04-20T12:27:50.1638777Z >           self.context.end()
+2026-04-20T12:27:50.1638930Z 
+2026-04-20T12:27:50.1639128Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: 
+2026-04-20T12:27:50.1639542Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1639961Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1640338Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1640678Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:917: in finish
+2026-04-20T12:27:50.1641061Z     args = toargs(context, *self.argdata)
+2026-04-20T12:27:50.1641302Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1641659Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:1759: in toargs
+2026-04-20T12:27:50.1642042Z     args[str(name)] = field.fromUnicode(s)
+2026-04-20T12:27:50.1642289Z                       ^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1642665Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:272: in fromUnicode
+2026-04-20T12:27:50.1643087Z     v = vt.fromUnicode(s)
+2026-04-20T12:27:50.1643304Z         ^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1643633Z .venv/lib/python3.12/site-packages/zope/configuration/fields.py:174: in fromUnicode
+2026-04-20T12:27:50.1644033Z     value = self.context.resolve(name)
+2026-04-20T12:27:50.1644271Z             ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1644630Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:220: in resolve
+2026-04-20T12:27:50.1644998Z     __import__(mname)
+2026-04-20T12:27:50.1645287Z src/udala/zinegotziak/indexers/commissions_index.py:3: in <module>
+2026-04-20T12:27:50.1645712Z     from udala.zinegotziak.content.councillor import ICouncillor
+2026-04-20T12:27:50.1646080Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1646307Z 
+2026-04-20T12:27:50.1646540Z     from collective.z3cform.datagridfield.datagridfield import DataGridFieldFactory
+2026-04-20T12:27:50.1647179Z     from collective.z3cform.datagridfield.registry import DictRow
+2026-04-20T12:27:50.1647553Z     from plone.app.dexterity import textindexer
+2026-04-20T12:27:50.1647961Z     from plone.app.multilingual.dx.interfaces import ILanguageIndependentField
+2026-04-20T12:27:50.1648360Z     from plone.app.textfield import RichText
+2026-04-20T12:27:50.1649046Z     from plone.app.vocabularies.catalog import StaticCatalogVocabulary
+2026-04-20T12:27:50.1649539Z >   from plone.app.z3cform.widgets.contentbrowser import ContentBrowserFieldWidget
+2026-04-20T12:27:50.1650078Z E   ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1650397Z 
+2026-04-20T12:27:50.1650582Z src/udala/zinegotziak/content/councillor.py:7: ModuleNotFoundError
+2026-04-20T12:27:50.1650844Z 
+2026-04-20T12:27:50.1651013Z During handling of the above exception, another exception occurred:
+2026-04-20T12:27:50.1651274Z 
+2026-04-20T12:27:50.1651636Z request = <SubRequest 'zope_layer_class_udala_zinegotziak_testing_FIXTURE_139717731947088' for <Function test_addon_uninstalled>>
+2026-04-20T12:27:50.1652411Z layer = <Layer 'udala.zinegotziak.testing.Layer'>
+2026-04-20T12:27:50.1652636Z 
+2026-04-20T12:27:50.1652728Z     def class_fixture(request, layer):
+2026-04-20T12:27:50.1652998Z         state = request.session.zopelayer_state
+2026-04-20T12:27:50.1653269Z         if layer not in state.current:
+2026-04-20T12:27:50.1653517Z >           setup_layer(layer, request)
+2026-04-20T12:27:50.1653682Z 
+2026-04-20T12:27:50.1653861Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:69: 
+2026-04-20T12:27:50.1654237Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1654668Z .venv/lib/python3.12/site-packages/zope/pytestlayer/fixture.py:40: in setup_layer
+2026-04-20T12:27:50.1655035Z     layer.setUp()
+2026-04-20T12:27:50.1655339Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:371: in setUp
+2026-04-20T12:27:50.1655787Z     self.setUpZope(portal.getPhysicalRoot(), configurationContext)
+2026-04-20T12:27:50.1656162Z src/udala/zinegotziak/testing.py:24: in setUpZope
+2026-04-20T12:27:50.1656462Z     self.loadZCML(package=udala.zinegotziak)
+2026-04-20T12:27:50.1656843Z .venv/lib/python3.12/site-packages/plone/app/testing/helpers.py:447: in loadZCML
+2026-04-20T12:27:50.1657234Z     return xmlconfig.file(name, **kw)
+2026-04-20T12:27:50.1657468Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1657817Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:717: in file
+2026-04-20T12:27:50.1658195Z     include(context, name, package)
+2026-04-20T12:27:50.1658562Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1659140Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1659528Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1659947Z     parser.parse(src)
+2026-04-20T12:27:50.1660204Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1660556Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1660885Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1661165Z     self.feed(buffer)
+2026-04-20T12:27:50.1661403Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1661697Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1661950Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1662180Z     ???
+2026-04-20T12:27:50.1662425Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1662775Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1663193Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1663605Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1663999Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1664394Z     self.context.end()
+2026-04-20T12:27:50.1664847Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1665218Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1665551Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1665935Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1666180Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1666552Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1666937Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1667319Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1667740Z     parser.parse(src)
+2026-04-20T12:27:50.1667990Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1668334Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1668789Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1669078Z     self.feed(buffer)
+2026-04-20T12:27:50.1669314Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1669726Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1669980Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1670218Z     ???
+2026-04-20T12:27:50.1670464Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1670811Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1671226Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1671630Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1672007Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:448: in endElementNS
+2026-04-20T12:27:50.1672395Z     self.context.end()
+2026-04-20T12:27:50.1672701Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:748: in end
+2026-04-20T12:27:50.1673061Z     self.stack.pop().finish()
+2026-04-20T12:27:50.1673390Z .venv/lib/python3.12/site-packages/zope/configuration/config.py:918: in finish
+2026-04-20T12:27:50.1673774Z     actions = self.handler(context, **args)
+2026-04-20T12:27:50.1674020Z               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2026-04-20T12:27:50.1674382Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:614: in include
+2026-04-20T12:27:50.1674761Z     processxmlfile(f, context)
+2026-04-20T12:27:50.1675138Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:464: in processxmlfile
+2026-04-20T12:27:50.1675543Z     parser.parse(src)
+2026-04-20T12:27:50.1675783Z /usr/lib/python3.12/xml/sax/expatreader.py:105: in parse
+2026-04-20T12:27:50.1676118Z     xmlreader.IncrementalParser.parse(self, source)
+2026-04-20T12:27:50.1676440Z /usr/lib/python3.12/xml/sax/xmlreader.py:124: in parse
+2026-04-20T12:27:50.1676715Z     self.feed(buffer)
+2026-04-20T12:27:50.1676950Z /usr/lib/python3.12/xml/sax/expatreader.py:211: in feed
+2026-04-20T12:27:50.1677245Z     self._parser.Parse(data, isFinal)
+2026-04-20T12:27:50.1677492Z ../Modules/pyexpat.c:475: in EndElement
+2026-04-20T12:27:50.1677729Z     ???
+2026-04-20T12:27:50.1677974Z /usr/lib/python3.12/xml/sax/expatreader.py:389: in end_element_ns
+2026-04-20T12:27:50.1678322Z     self._cont_handler.endElementNS(pair, None)
+2026-04-20T12:27:50.1678861Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:450: in endElementNS
+2026-04-20T12:27:50.1679266Z     self._handle_exception(ex, info)
+2026-04-20T12:27:50.1679551Z _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+2026-04-20T12:27:50.1679771Z 
+2026-04-20T12:27:50.1680007Z self = <zope.configuration.xmlconfig.ConfigurationHandler object at 0x7f128de752e0>
+2026-04-20T12:27:50.1680572Z ex = ModuleNotFoundError("No module named 'plone.app.z3cform.widgets.contentbrowser'")
+2026-04-20T12:27:50.1681383Z info = File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1681883Z 
+2026-04-20T12:27:50.1682106Z     def _handle_exception(self, ex, info):
+2026-04-20T12:27:50.1682366Z         if self.testing:
+2026-04-20T12:27:50.1682563Z             raise
+2026-04-20T12:27:50.1682775Z         if isinstance(ex, ConfigurationError):
+2026-04-20T12:27:50.1683052Z             ex.add_details(repr(info))
+2026-04-20T12:27:50.1683277Z             raise
+2026-04-20T12:27:50.1683448Z     
+2026-04-20T12:27:50.1683642Z >       raise ZopeXMLConfigurationError(info, ex)
+2026-04-20T12:27:50.1684462Z E       zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1685506Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.1686308Z E           File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.1687011Z E           ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1687345Z 
+2026-04-20T12:27:50.1687728Z .venv/lib/python3.12/site-packages/zope/configuration/xmlconfig.py:237: ZopeXMLConfigurationError
+2026-04-20T12:27:50.1688238Z =========================== short test summary info ============================
+2026-04-20T12:27:50.1689762Z ERROR tests/setup/test_setup_install.py::TestSetupInstall::test_addon_installed - zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1691305Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.1692179Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.1692863Z     ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1694087Z ERROR tests/setup/test_setup_install.py::TestSetupInstall::test_browserlayer - zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1695436Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.1696284Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.1696959Z     ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.1698152Z ERROR tests/setup/test_setup_install.py::TestSetupInstall::test_latest_version - zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.1699709Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.1700547Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.1701210Z     ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.7843303Z ERROR tests/setup/test_setup_uninstall.py::TestSetupUninstall::test_addon_uninstalled - zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.7845694Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.7847057Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.7848538Z     ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.7850646Z ERROR tests/setup/test_setup_uninstall.py::TestSetupUninstall::test_browserlayer_not_registered - zope.configuration.xmlconfig.ZopeXMLConfigurationError: File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/commissions_index.zcml", line 8.2-11.8
+2026-04-20T12:27:50.7852540Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/configure.zcml", line 19.2-19.33
+2026-04-20T12:27:50.7853586Z     File "/home/runner/work/udala.zinegotziak/udala.zinegotziak/src/udala/zinegotziak/indexers/configure.zcml", line 8.2-8.43
+2026-04-20T12:27:50.7854417Z     ModuleNotFoundError: No module named 'plone.app.z3cform.widgets.contentbrowser'
+2026-04-20T12:27:50.7854956Z ============================== 5 errors in 8.71s ===============================
+2026-04-20T12:27:51.3562187Z make: *** [Makefile:132: test] Error 1
+2026-04-20T12:27:51.3579803Z ##[error]Process completed with exit code 2.
+2026-04-20T12:27:51.3673705Z Post job cleanup.
+2026-04-20T12:27:51.3756368Z Post job cleanup.
+2026-04-20T12:27:51.4565419Z [command]/usr/bin/git version
+2026-04-20T12:27:51.4607638Z git version 2.53.0
+2026-04-20T12:27:51.4652868Z Temporarily overriding HOME='/home/runner/work/_temp/0a8bfa33-f8d4-4c40-8885-9b2009fe4ab7' before making global git config changes
+2026-04-20T12:27:51.4654200Z Adding repository directory to the temporary git global config as a safe directory
+2026-04-20T12:27:51.4659425Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/udala.zinegotziak/udala.zinegotziak
+2026-04-20T12:27:51.4694023Z Removing SSH command configuration
+2026-04-20T12:27:51.4701110Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2026-04-20T12:27:51.4736322Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2026-04-20T12:27:51.4964026Z Removing HTTP extra header
+2026-04-20T12:27:51.4969493Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2026-04-20T12:27:51.5004180Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2026-04-20T12:27:51.5227883Z Removing includeIf entries pointing to credentials config files
+2026-04-20T12:27:51.5235548Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2026-04-20T12:27:51.5293617Z includeif.gitdir:/home/runner/work/udala.zinegotziak/udala.zinegotziak/.git.path
+2026-04-20T12:27:51.5294511Z includeif.gitdir:/home/runner/work/udala.zinegotziak/udala.zinegotziak/.git/worktrees/*.path
+2026-04-20T12:27:51.5294994Z includeif.gitdir:/github/workspace/.git.path
+2026-04-20T12:27:51.5295379Z includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-20T12:27:51.5305099Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/udala.zinegotziak/udala.zinegotziak/.git.path
+2026-04-20T12:27:51.5327149Z /home/runner/work/_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:51.5337815Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/udala.zinegotziak/udala.zinegotziak/.git.path /home/runner/work/_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:51.5372807Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/home/runner/work/udala.zinegotziak/udala.zinegotziak/.git/worktrees/*.path
+2026-04-20T12:27:51.5395268Z /home/runner/work/_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:51.5406178Z [command]/usr/bin/git config --local --unset includeif.gitdir:/home/runner/work/udala.zinegotziak/udala.zinegotziak/.git/worktrees/*.path /home/runner/work/_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:51.5438013Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git.path
+2026-04-20T12:27:51.5459218Z /github/runner_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:51.5467402Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git.path /github/runner_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:51.5498320Z [command]/usr/bin/git config --local --get-all includeif.gitdir:/github/workspace/.git/worktrees/*.path
+2026-04-20T12:27:51.5519210Z /github/runner_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:51.5528982Z [command]/usr/bin/git config --local --unset includeif.gitdir:/github/workspace/.git/worktrees/*.path /github/runner_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config
+2026-04-20T12:27:51.5561385Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2026-04-20T12:27:51.5805432Z Removing credentials config '/home/runner/work/_temp/git-credentials-7f018a79-fbc0-4aee-ad19-b8bec84d6308.config'
+2026-04-20T12:27:51.5955956Z Cleaning up orphan processes
+2026-04-20T12:27:51.6366864Z ##[warning]Node.js 20 actions are deprecated. The following actions are running on Node.js 20 and may not work as expected: actions/cache@v4, astral-sh/setup-uv@v5. Actions will be forced to run with Node.js 24 by default starting June 2nd, 2026. Node.js 20 will be removed from the runner on September 16th, 2026. Please check if updated versions of these actions are available that support Node.js 24. To opt into Node.js 24 now, set the FORCE_JAVASCRIPT_ACTIONS_TO_NODE24=true environment variable on the runner or in your workflow file. Once Node.js 24 becomes the default, you can temporarily opt out by setting ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true. For more information see: https://github.blog/changelog/2025-09-19-deprecation-of-node-20-on-github-actions-runners/
