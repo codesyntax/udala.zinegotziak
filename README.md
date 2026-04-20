@@ -22,7 +22,7 @@ A Plone addon providing specific functionality for UdalPlone projects.
 
 ## Features
 
-- Custom content types and views specific to udala.zinegotziak
+- Provides the `Councillor`, `Party`, and `Commission` content types for government representation
 - RestAPI endpoints
 - Volto-ready backend setup
 
